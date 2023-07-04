@@ -18,10 +18,38 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  box-sizing: border-box;
+}
+
+.parent {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  padding-top: 10px;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 20px;
+  width: 150px;
+  height: 70px;
+  margin: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+li:hover {
+  border: 2px solid rgb(46 141 255);
+  background-color: rgb(232 239 246);
+  color: rgb(46 141 255);
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
 }
