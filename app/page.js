@@ -23,7 +23,7 @@ export default function Home() {
 function Categories() {
   return (
     <div className="parent">
-      <ul className="container">
+      <ul>
         {category.map((category) => (
           <>
             <li className={category.icon}>
