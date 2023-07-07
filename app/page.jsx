@@ -13,7 +13,7 @@ export default function Home() {
         <br />
         Try Navigating to{" "}
         <a href="/home" style={{ color: "blue" }}>
-          /home
+          home
         </a>
       </h1>
     </main>
