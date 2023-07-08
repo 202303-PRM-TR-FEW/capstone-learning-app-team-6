@@ -40,7 +40,7 @@ const FeaturedCourses = () => {
   return (
     <section className={styles["features-container"]}>
       <h2 className={styles["header"]}>Featured Courses</h2>
-      <ul className={`${styles["cards-container"]} flex`}>
+      <ul className={`${styles["cards-container"]} mflex`}>
         <DisplayCourses AllCourses={courses}></DisplayCourses>
       </ul>
     </section>
