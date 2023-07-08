@@ -1,0 +1,51 @@
+.course-card {
+  flex-direction: column;
+  background-color: #fbfbfb;
+  border-radius: 2rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+.course-card:hover {
+  scale: 1.02;
+}
+
+.course-image__container {
+  width: 25rem;
+  height: 10rem;
+  padding: 0.5rem;
+}
+
+.course-image__container img {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.course-name {
+  align-self: flex-start;
+  padding-left: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.course-info {
+  color: #b1b1b1;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 1rem 1.5rem 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.course-duration,
+.course-rate {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.course-price {
+  background-color: #2e8dff;
+  color: #fbfbfb;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+}

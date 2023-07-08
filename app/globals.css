@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -20,8 +20,27 @@ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #f5f5f5;
+}
+
+.mflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .parent {
@@ -50,6 +69,6 @@ li:hover {
 .text {
   font-size: 15px;
   font-weight: 500;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   margin-top: 10px;
 }
