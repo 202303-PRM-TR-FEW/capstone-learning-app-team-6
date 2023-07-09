@@ -36,10 +36,17 @@ html {
 }
 body {
   background-color: #f5f5f5;
+  padding-top: 3rem;
 }
 
 .mflex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 950px) {
+  html {
+    font-size: 8px;
+  }
 }

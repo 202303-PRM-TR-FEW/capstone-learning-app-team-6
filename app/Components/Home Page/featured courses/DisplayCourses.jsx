@@ -1,4 +1,4 @@
-import CourseElement from "./CourseElement";
+import CourseElement from "./FeaturedCourseElement";
 
 const DisplayCourses = (props) => {
   return props.AllCourses.map((course) => {

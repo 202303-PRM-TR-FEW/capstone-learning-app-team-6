@@ -1,0 +1,43 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.parent {
+  margin-bottom: 3rem;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 2rem;
+}
+
+.li {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 2rem;
+  width: 15rem;
+  height: 7rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.li:hover {
+  border: 2px solid rgb(46 141 255);
+  background-color: rgb(232 239 246);
+  color: rgb(46 141 255);
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 1rem;
+  color: #686868;
+}
