@@ -1,6 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.js";
-import styles from "../categories/styles/categories.module.css";
+import styles from "./categories.module.css";
 
 let category = [
   { icon: "fa-solid fa-chart-line", name: "Sales" },
@@ -8,23 +8,22 @@ let category = [
   { icon: "fa-solid fa-bezier-curve", name: "Drawing" },
   { icon: "fa-solid fa-table", name: "Big Data" },
   { icon: "fa-solid fa-pen-ruler", name: "Design" },
-  { icon: "fa-solid fa-lightbulb", name: "Markiting" },
+  { icon: "fa-solid fa-lightbulb", name: "Marketing" },
   { icon: "fa-solid fa-star", name: "Astronomy" },
 ];
 
 function Categories() {
   return (
-    <div>
+    <section className={styles.parent}>
+      <h2 className={styles["header"]}>Categories</h2>
       <ul>
         {category.map((category) => (
-          <>
-            <li className={`${category.icon} ${styles.category}`}>
-              <p className={styles.text}>{category.name}</p>
-            </li>
-          </>
+          <li key={category.name} className={`${category.icon} ${styles.li} `}>
+            <p className={styles.text}>{category.name}</p>
+          </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
