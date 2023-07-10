@@ -12,22 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div style={{ display: "flex" }}>
+      <body className={inter.className} style={{ display: "flex" }}>
+        <header>
           <Navbar />
-          <div style={{ flex: 1 }}>{children}</div>
-        </div>
+        </header>
+        <main style={{ flex: 1 }}>{children}</main>
       </body>
     </html>
   );
 }
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <body className={inter.className}>
-//         <Navbar />
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }

@@ -1,6 +1,6 @@
-import styles from "./styles/courseElement.module.css";
+import styles from "./styles/featuredCourseElement.module.css";
 
-const CourseElement = (props) => {
+const FeaturedCourseElement = (props) => {
   return (
     <li className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
@@ -45,4 +45,4 @@ const CourseElement = (props) => {
   );
 };
 
-export default CourseElement;
+export default FeaturedCourseElement;

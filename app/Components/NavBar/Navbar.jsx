@@ -1,8 +1,8 @@
 const Navbar = () => {
   return (
-    <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center">
+    <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10">
       <div>
-        <div className="text-blue-500 hover:text-blue-400">
+        <div className="text-blue-500 hover:text-blue-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -16,8 +16,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <div className="text-gray-400 hover:text-blue-400">
+      <div className="flex flex-col gap-10">
+        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ const Navbar = () => {
           <p className="text-l font-bold">Home </p>
         </div>
 
-        <div className="text-gray-400 hover:text-blue-400">
+        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const Navbar = () => {
           <p className="text-l font-bold">Search</p>
         </div>
 
-        <div className="text-gray-400 hover:text-blue-400">
+        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -64,7 +64,7 @@ const Navbar = () => {
           <p className="text-l font-bold">Course</p>
         </div>
 
-        <div className="text-gray-400 hover:text-blue-400">
+        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ const Navbar = () => {
           <p className="text-l font-bold">Saved</p>
         </div>
 
-        <div className="text-gray-400 hover:text-blue-400 mb-4">
+        <div className="text-gray-400 hover:text-blue-400 cursor-pointer mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
