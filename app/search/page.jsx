@@ -1,5 +1,5 @@
-import TopSearches from "../Components/Search Page/top searches/top-searches";
-import styles from "../home/homePage.module.css";
+import TopSearches from "@/Components/Search Page/top searches/TopSearches";
+import styles from "./searchPage.module.css";
 
 const Search = (props) => {
   return (

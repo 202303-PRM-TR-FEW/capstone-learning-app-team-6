@@ -2,28 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 * {
   padding: 0;
   margin: 0;
@@ -44,37 +22,14 @@ body {
   align-items: center;
 }
 
+.header-text {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 950px) {
   html {
     font-size: 8px;
   }
-}
-.parent {
-  text-align: center;
-}
-
-li {
-  display: inline-block;
-  padding-top: 10px;
-  font-size: 15px;
-  background-color: white;
-  border-radius: 20px;
-  width: 150px;
-  height: 70px;
-  margin: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-
-li:hover {
-  border: 2px solid rgb(46 141 255);
-  background-color: rgb(232 239 246);
-  color: rgb(46 141 255);
-}
-
-.text {
-  font-size: 15px;
-  font-weight: 500;
-  font-family: "Courier New", Courier, monospace;
-  margin-top: 10px;
 }

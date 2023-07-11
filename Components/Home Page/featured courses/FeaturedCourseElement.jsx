@@ -2,7 +2,7 @@ import styles from "./styles/featuredCourseElement.module.css";
 
 const FeaturedCourseElement = (props) => {
   return (
-    <li className={`${styles["course-card"]} mflex`}>
+    <li key={props.key} className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
         <img src={props.image} />
       </div>

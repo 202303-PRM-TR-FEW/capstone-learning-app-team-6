@@ -4,6 +4,7 @@ const DisplayCourses = (props) => {
   return props.AllCourses.map((course) => {
     return (
       <CourseElement
+        key={course.name}
         name={course.name}
         image={course.image}
         duration={course.duration}

@@ -2,23 +2,14 @@
   max-width: 100%;
   margin-bottom: 4rem;
 }
-.header {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #303030;
-  margin-bottom: 2rem;
-}
 
-/* .cards-container {
-  gap: 1rem;
-  justify-content: flex-start;
-} */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   justify-content: flex-start;
 }
+
 @media (max-width: 950px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);

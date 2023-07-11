@@ -22,7 +22,7 @@ const courses = [
 const MyLearning = (props) => {
   return (
     <section className={styles["myLearning-container"]}>
-      <h2 className={styles["header"]}>My Learning</h2>
+      <h2 className="header-text">My Learning</h2>
       <ul className={`${styles["cards-container"]} mflex`}>
         <DisplayMyLearning AllCourses={courses}></DisplayMyLearning>
       </ul>
