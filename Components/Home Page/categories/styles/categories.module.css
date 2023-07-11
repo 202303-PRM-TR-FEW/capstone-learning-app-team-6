@@ -6,13 +6,6 @@
   margin-bottom: 3rem;
 }
 
-.header {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #303030;
-  margin-bottom: 2rem;
-}
-
 .li {
   display: inline-flex;
   flex-direction: column;

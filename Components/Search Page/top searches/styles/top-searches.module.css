@@ -1,0 +1,31 @@
+.header {
+  font-size: 12px;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 2rem;
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.li {
+  flex-grow: 1;
+  margin: 0px 10px 10px 0px;
+  overflow: visible;
+  font-size: 15px;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 20px;
+  white-space: nowrap;
+  opacity: unset;
+  visibility: visible;
+  color: rgb(48, 48, 48);
+  border: 2px solid lightgrey;
+}
+
+.li:hover {
+  border: 2px solid rgb(46 141 255);
+  background-color: rgb(232 239 246);
+  color: rgb(46 141 255);
+}
