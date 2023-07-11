@@ -1,3 +1,4 @@
+import Button from "@/Components/UI/progress bar/Button";
 import styles from "./styles/featuredCourseElement.module.css";
 
 const FeaturedCourseElement = (props) => {
@@ -39,7 +40,7 @@ const FeaturedCourseElement = (props) => {
           </svg>
           {props.rate}/5
         </p>
-        <p className={styles["course-price"]}>${props.price}</p>
+        <Button>${props.price}</Button>
       </div>
     </li>
   );
