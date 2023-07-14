@@ -1,7 +1,16 @@
+'client side'
 import Image from "next/image"
+const objects = [
+  {
+    "image":"/../public/image.jpeg",
+    "courseName":"course name",
+    "Author":"Author name"
+
+  },
+]
 const Recommended = () => {
   return (
-    <div className="bg-slate-300 h-1/2 w-screen p-5">
+    <div className="bg-slate-200 h-1/3 w-screen p-5">
       <h3 className="text-slate-800 font-bold">
         RECOMMENDED FOR YOU
       </h3>
