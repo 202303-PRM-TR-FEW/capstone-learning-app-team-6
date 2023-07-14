@@ -12,7 +12,7 @@ const profile = {
 
 const Profile = () => {
   return (
-    <div className='flex flex-row gap-x-5 p-4 bg-gray-300 w-screen h-screen'>
+    <div className='flex flex-row gap-x-5 p-4 bg-gray-300 w-screen h-1/2'>
       <div className="w-36 h-36 rounded-xl">
         <Image
           className="rounded-full"
