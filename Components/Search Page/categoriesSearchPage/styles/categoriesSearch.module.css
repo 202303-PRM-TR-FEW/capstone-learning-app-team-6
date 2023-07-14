@@ -12,14 +12,18 @@
 }
 
 .category {
+  text-align: center;
   display: inline-block;
-  padding-top: 1rem;
-  font-size: 1.5rem;
-  border-radius: 2rem;
-  margin-right: 4rem;
+  padding-top: 10px;
+  font-size: 15px;
+  border-radius: 20px;
+  width: 140px;
+  height: 70px;
+  margin: 5px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .checkbox {
   margin-right: 1rem;
-  width: 2rem;
 }

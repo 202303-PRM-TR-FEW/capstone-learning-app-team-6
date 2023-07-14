@@ -1,0 +1,89 @@
+.container {
+  padding-right: 5rem;
+  display: flex;
+  float: right;
+  position: relative;
+}
+
+.title {
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  margin-bottom: 20rem;
+}
+
+.friendSuggestions {
+  float: right;
+  clear: right;
+  border-radius: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.friendsContainer {
+  margin-top: 8rem;
+}
+
+.newFriend {
+  position: relative;
+  text-align: center;
+  float: left;
+  clear: left;
+  display: flex;
+  padding: 0.5rem;
+  width: 42rem;
+}
+
+.viewAllFriendSuggestions {
+  padding-left: 2rem;
+  padding-top: 11rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: start;
+  color: rgb(46 141 255);
+}
+
+.friendName {
+  width: 30rem;
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.friendImg {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.addFriend {
+  float: right;
+  padding: 1rem;
+  background-color: rgb(46 141 255);
+  border-radius: 1rem;
+  margin-top: 0.3rem;
+}
+
+.btnAddFriend {
+  margin-right: 1rem;
+}
+
+.friendClose {
+  position: absolute;
+  display: flex;
+  margin-left: 4rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.horizontalLine {
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  margin-left: 1rem;
+  margin-right: auto;
+}
