@@ -33,7 +33,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-#text file
-components/Loops.jsx
-./components/Loops.jsx
