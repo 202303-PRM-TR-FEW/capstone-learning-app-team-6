@@ -1,0 +1,25 @@
+.section {
+  padding-bottom: 4rem;
+  border-bottom: 2px solid #ebebeb;
+}
+
+.header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #303030;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category {
+  display: inline-block;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  margin-right: 4rem;
+}
+
+.checkbox {
+  margin-right: 1rem;
+  width: 2rem;
+}

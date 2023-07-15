@@ -14,9 +14,9 @@ let topSearches = [
 
 function TopSearches() {
   return (
-    <section className={styles.parent}>
+    <section className={styles.section}>
       <h2 className={styles["header"]}>TOP SEARCHES</h2>
-      <ul>
+      <ul className={styles.parent}>
         {topSearches.map((topSearches) => (
           <li
             key={topSearches.name}
