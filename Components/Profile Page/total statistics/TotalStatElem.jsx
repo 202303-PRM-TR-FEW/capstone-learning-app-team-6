@@ -2,7 +2,7 @@ import styles from "./styles/totalStatElem.module.css";
 
 const TotalStatElem = (props) => {
   return (
-    <li key={props.key} className={`${styles["course-card"]} mflex`}>
+    <li className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
         <img src={props.image} />
       </div>

@@ -1,8 +1,6 @@
 .buttons {
-  position: fixed;
-  right: 0px;
-  bottom: 20rem;
-  margin-right: 5rem;
+  position: relative;
+  margin-top: 4rem;
 }
 
 .findFriends {

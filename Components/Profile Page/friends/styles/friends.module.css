@@ -1,11 +1,7 @@
 .container {
   padding-right: 5rem;
   display: flex;
-  float: right;
   position: relative;
-  position: fixed;
-  right: 0px;
-  top: 25rem;
 }
 
 .title {

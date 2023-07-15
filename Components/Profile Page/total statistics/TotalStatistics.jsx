@@ -22,7 +22,7 @@ const courses = [
 const TotalStatistics = () => {
   return (
     <section className={styles["features-container"]}>
-      <h2 className="header-text">Total Statistics</h2>
+      <h3 className="header-text">Total Statistics</h3>
       <ul className={`${styles["cards-container"]} mflex`}>
         <DisplayStatistics AllCourses={courses}></DisplayStatistics>
       </ul>
