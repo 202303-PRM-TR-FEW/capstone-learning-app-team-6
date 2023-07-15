@@ -1,0 +1,33 @@
+.section {
+  padding-bottom: 4rem;
+  border-bottom: 2px solid #ebebeb;
+}
+.header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #303030;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.li {
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+
+  color: rgb(48, 48, 48);
+  border: 2px solid lightgrey;
+}
+
+.li:hover {
+  border: 2px solid rgb(46 141 255);
+  background-color: rgb(232 239 246);
+  color: rgb(46 141 255);
+}

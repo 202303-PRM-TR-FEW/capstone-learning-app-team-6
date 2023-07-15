@@ -1,8 +1,9 @@
-import styles from "./styles/courseElement.module.css";
+import Button from "@/Components/UI/progress bar/Button";
+import styles from "./styles/featuredCourseElement.module.css";
 
-const CourseElement = (props) => {
+const FeaturedCourseElement = (props) => {
   return (
-    <li className={`${styles["course-card"]} mflex`}>
+    <li key={props.key} className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
         <img src={props.image} />
       </div>
@@ -39,10 +40,10 @@ const CourseElement = (props) => {
           </svg>
           {props.rate}/5
         </p>
-        <p className={styles["course-price"]}>${props.price}</p>
+        <Button>${props.price}</Button>
       </div>
     </li>
   );
 };
 
-export default CourseElement;
+export default FeaturedCourseElement;
