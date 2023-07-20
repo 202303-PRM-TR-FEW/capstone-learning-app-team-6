@@ -1,6 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.js";
-import styles from "./styles/categoriesSearch.module.css";
+import styles from "@/Components/Search Page/categoriesSearchPage/styles/categoriesSearch.module.css";
 
 let category = [
   { icon: "fa-solid fa-chart-line", name: "Sales" },
@@ -14,8 +14,7 @@ let category = [
 
 function CategoriesSearchPage() {
   return (
-    <section className={styles.section}>
-      <h2 className={styles["header"]}>CATEGORIES</h2>
+    <div>
       <ul>
         {category.map(
           (
@@ -36,7 +35,7 @@ function CategoriesSearchPage() {
             )
         )}
       </ul>
-    </section>
+    </div>
   );
 }
 

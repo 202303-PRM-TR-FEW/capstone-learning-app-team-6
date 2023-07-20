@@ -1,0 +1,25 @@
+.buttons {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.findFriends {
+  border: 1px solid rgb(46 141 255);
+  width: 20rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  font-weight: 800;
+  color: rgb(46 141 255);
+}
+
+.inviteFriends {
+  border: 1px solid rgb(46 141 255);
+  background-color: rgb(46 141 255);
+  width: 20rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  font-weight: 800;
+  color: white;
+}

@@ -1,0 +1,9 @@
+.cards-container {
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .cards-container {
+    flex-direction: column;
+  }
+}

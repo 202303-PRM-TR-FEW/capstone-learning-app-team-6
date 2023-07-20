@@ -1,0 +1,14 @@
+.profile-container {
+  margin: auto 12rem auto 4rem;
+}
+@media (max-width: 950px) {
+  .profile-container {
+    margin-right: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .profile-container {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
