@@ -1,0 +1,25 @@
+.header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #303030;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.ratingList {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 1rem;
+  width: 5rem;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  width: 3rem;
+  height: auto;
+  cursor: pointer;
+  stroke: #2e8dff;
+  fill: #2e8dff;
+}

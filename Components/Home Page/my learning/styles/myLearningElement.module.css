@@ -6,10 +6,12 @@
   border-radius: 2rem;
   cursor: pointer;
   justify-content: flex-start;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .myLearning-card:hover {
   scale: 1.02;
+  border: 1px solid #2e8dff;
+  background-color: #e8eff6;
 }
 
 .image-container {

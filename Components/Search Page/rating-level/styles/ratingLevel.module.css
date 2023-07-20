@@ -1,0 +1,10 @@
+.section {
+  padding-bottom: 4rem;
+  border-bottom: 2px solid #ebebeb;
+  display: flex;
+}
+
+.ratingLevelContainer {
+  display: flex;
+  gap: 28rem;
+}

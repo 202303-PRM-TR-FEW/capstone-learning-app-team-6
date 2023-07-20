@@ -4,7 +4,7 @@ import MyLearning from "@/Components/Home Page/my learning/MyLearning";
 import styles from "./homePage.module.css";
 const Home = (props) => {
   return (
-    <main className={styles["home-container"]}>
+    <main className="home-container">
       <FeaturedCourses />
       <Categories />
       <MyLearning />

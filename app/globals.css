@@ -13,13 +13,37 @@ html {
 }
 body {
   background-color: #f5f5f5;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
 }
 
 .mflex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.grid-2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.home-container {
+  margin: auto 12rem auto 4rem;
+}
+.home-container > section:first-of-type {
+  padding-top: 3rem;
+}
+@media (max-width: 950px) {
+  .home-container {
+    margin-right: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .home-container {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 }
 
 .header-text {

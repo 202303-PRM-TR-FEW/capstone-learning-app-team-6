@@ -2,15 +2,15 @@ import TopSearches from "@/Components/Search Page/top searches/TopSearches";
 import CategoriesSearchPage from "@/Components/Search Page/categories/categoriesSearchPage";
 import styles from "./searchPage.module.css";
 import SearchBar from "@/Components/Search Page/find your fav/SearchBar";
+import RatingLevel from "@/Components/Search Page/rating-level/RatingLevel";
 
 const Search = (props) => {
   return (
-    <main className={styles["home-container"]}>
-      <h2 className="header-text">Find Your Favorites</h2>
-      <SearchBar></SearchBar>
+    <main className="home-container">
+      <SearchBar />
       <TopSearches />
       <CategoriesSearchPage />
-      {/* This is the searches */}
+      <RatingLevel />
     </main>
   );
 };

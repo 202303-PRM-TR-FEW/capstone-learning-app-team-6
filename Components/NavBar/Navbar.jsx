@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10">
-      <div>
-        <div className="text-blue-500 hover:text-blue-400 cursor-pointer">
-          <Link href="/">
+    <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10 pt-12">
+      <Link href="/">
+        <div>
+          <div className="text-blue-500 hover:text-blue-400 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -16,13 +16,13 @@ const Navbar = () => {
               <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
               <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
             </svg>
-          </Link>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="flex flex-col gap-10">
-        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
-          <Link href="/home">
+        <Link href="/home">
+          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -33,11 +33,11 @@ const Navbar = () => {
               <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
             </svg>
             <p className="text-l font-bold">Home </p>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
-        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
-          <Link href="/search">
+        <Link href="/search">
+          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -51,11 +51,11 @@ const Navbar = () => {
               />
             </svg>
             <p className="text-l font-bold">Search</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
-        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
-          <Link href="/course">
+        <Link href="/courses">
+          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -69,11 +69,11 @@ const Navbar = () => {
               />
             </svg>
             <p className="text-l font-bold">Course</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
-        <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
-          <Link href="/saved">
+        <Link href="/saved">
+          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -87,11 +87,11 @@ const Navbar = () => {
               />
             </svg>
             <p className="text-l font-bold">Saved</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
-        <div className="text-gray-400 hover:text-blue-400 cursor-pointer mb-4">
-          <Link href="/profile">
+        <Link href="/profile">
+          <div className="text-gray-400 hover:text-blue-400 cursor-pointer mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -105,8 +105,8 @@ const Navbar = () => {
               />
             </svg>
             <p className="text-l font-bold">Profile</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </nav>
   );
