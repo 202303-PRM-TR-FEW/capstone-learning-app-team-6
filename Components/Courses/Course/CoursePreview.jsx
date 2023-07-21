@@ -1,4 +1,3 @@
-import Button from "@/Components/UI/progress bar/Button";
 import styles from "./styles/coursePreview.module.css";
 
 const courses = [
@@ -98,9 +97,9 @@ const CoursePreview = (props) => {
         <button
           className={`${styles["action-button"]} ${styles["action-button__review"]}`}
         >
-          REVIEW COURSE
+          {props.review}
         </button>
-        <button className={styles["action-button"]}>CONTINUE LEARNING</button>
+        <button className={styles["action-button"]}>{props.action}</button>
       </div>
     </section>
   );

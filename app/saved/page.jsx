@@ -13,8 +13,9 @@ const Courses = (props) => {
       <MyLearningCourses
         header={"Saved Courses"}
         courses={courses.slice(4)}
+        isButton={true}
       />
-      <CoursePreview />
+      <CoursePreview review={"PREVIEW"} action={"BUY NOW"}/>
     </main>
   );
 };

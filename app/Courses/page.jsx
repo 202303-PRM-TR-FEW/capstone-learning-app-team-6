@@ -10,7 +10,7 @@ const Courses = (props) => {
       className={`home-container grid-2 ${styles["home-container__courses"]}`}
     >
       <MyLearningCourses header={"My Learning"} courses={courses.slice(0, 4)} />
-      <CoursePreview />
+      <CoursePreview review={"REVIEW COURSE"} action={"CONTINUE LEARNING"} />
     </main>
   );
 };

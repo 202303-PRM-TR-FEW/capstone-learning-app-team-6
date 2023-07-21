@@ -51,6 +51,9 @@
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
+.author-container:hover {
+opacity: 0.7;
+}
 .author-image__container {
   width: 4rem;
   height: 4rem;
@@ -100,8 +103,19 @@
   padding: 1rem;
   text-align: center;
 }
+.action-button:hover {
+  background-color: #fbfbfb;
+  border: 1px solid #2e8dff;
+  color: #2e8dff;
+}
+
 .action-button__review {
   background-color: #fbfbfb;
   border: 1px solid #2e8dff;
   color: #2e8dff;
+}
+.action-button__review:hover {
+  border-radius: 1rem;
+  background-color: #2e8dff;
+  color: #fbfbfb;
 }

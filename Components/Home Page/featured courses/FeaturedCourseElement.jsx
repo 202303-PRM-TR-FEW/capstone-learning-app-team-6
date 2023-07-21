@@ -1,5 +1,15 @@
-import Button from "@/Components/UI/progress bar/Button";
+"use client";
 import styles from "./styles/featuredCourseElement.module.css";
+import { styled } from "styled-components";
+
+const Button = styled.button`
+  background-color: #2e8dff;
+  color: #fbfbfb;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+`;
 
 const FeaturedCourseElement = (props) => {
   return (

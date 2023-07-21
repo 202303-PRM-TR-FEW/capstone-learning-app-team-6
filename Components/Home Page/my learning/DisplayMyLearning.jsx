@@ -1,5 +1,6 @@
 import Progress from "@/Components/UI/progress bar/Progress";
 import MyLearningElement from "./MyLearningElement";
+import Button from "@/Components/UI/progress bar/Button";
 
 const DisplayMyLearning = (props) => {
   return props.AllCourses.map((course) => {
@@ -10,8 +11,11 @@ const DisplayMyLearning = (props) => {
         image={course.image}
         author={course.author}
       >
-        <Progress value={course.value}
-         />
+        {props.isButton ? (
+          <Button>BUY</Button>
+        ) : (
+          <Progress value={course.value} />
+        )}
       </MyLearningElement>
     );
   });
