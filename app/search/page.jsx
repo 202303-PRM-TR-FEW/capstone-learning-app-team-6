@@ -3,6 +3,7 @@ import CategoriesSearchPage from "@/Components/Search Page/categoriesSearchPage/
 import styles from "./searchPage.module.css";
 import SearchBar from "@/Components/Search Page/find your fav/SearchBar";
 import RatingLevel from "@/Components/Search Page/rating-level/RatingLevel";
+import Recommended from "@/Components/Search Page/recommended for you/Recommended";
 
 const Search = (props) => {
   return (
@@ -11,6 +12,7 @@ const Search = (props) => {
       <TopSearches />
       <CategoriesSearchPage />
       <RatingLevel />
+      <Recommended />
     </main>
   );
 };
