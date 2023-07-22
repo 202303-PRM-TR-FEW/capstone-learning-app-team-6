@@ -3,6 +3,13 @@ const courses = [
     name: "Becoming a Photographer",
     author: "Clara Manning",
     value: 69,
+    category: "test",
+    description: "test",
+    rate: "",
+    duration: "test",
+    price: 24,
+    level: "test",
+    content: {},
     image:
       "https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg",
   },

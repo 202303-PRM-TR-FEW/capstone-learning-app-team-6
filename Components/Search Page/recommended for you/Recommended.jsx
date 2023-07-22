@@ -43,7 +43,7 @@ const Recommended = () => {
               className="mt-5  rounded-xl"
               src={course.image}
               width={200}
-              height={200}
+              height={2}
               alt="Picture of the author"
             />
 

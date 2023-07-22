@@ -1,5 +1,3 @@
-import Progress from "../../UI/progress bar/progress";
-
 import styles from "./styles/myLearningElement.module.css";
 
 const MyLearningElement = (props) => {
@@ -28,7 +26,6 @@ const MyLearningElement = (props) => {
             </div>
             <h3 className={styles["author-name"]}>{props.author} </h3>
           </div>
-          {/* <Progress value={props.value} /> */}
           {props.children}
         </div>
       </li>

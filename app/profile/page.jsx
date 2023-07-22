@@ -1,3 +1,4 @@
+import PersonalInfo from "@/components/Profile Page/personal info/PersonalInfo";
 import TotalStatistics from "@/components/Profile Page/total statistics/TotalStatistics";
 import Achievements from "@/Components/Profile Page/achievements/Achievements";
 import FriendSuggestions from "@/Components/Profile Page/friend suggestion/friend-suggestion";
@@ -8,6 +9,7 @@ import styles from "./profilePage.module.css";
 const Profile = (props) => {
   return (
     <main className={styles["profile-container"]}>
+      <PersonalInfo />
       <TotalStatistics />
       <Achievements />
       <FriendSuggestions />
