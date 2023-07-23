@@ -1,5 +1,25 @@
 const courses = [
   {
+    name: "Building ios15 App",
+    author: "Tom Collins",
+    category: "test",
+    description: "test",
+    duration: "test",
+    level: "test",
+    price: 24,
+    image:
+      "https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg",
+    rate: "",
+    value: 11,
+    content: [
+      { name: "Introduction", videos: 1 },
+      { name: "1. Software setup", videos: 3 },
+      { name: "2. UI Fundamentals", videos: 6 },
+      { name: "3. Testing and Finishing", videos: 2 },
+      { name: "Skill Test", videos: 1 },
+    ],
+  },
+  {
     name: "Becoming a Photographer",
     author: "Clara Manning",
     value: 69,
@@ -41,13 +61,6 @@ const courses = [
     value: 27,
     image:
       "https://assets.api.uizard.io/api/cdn/stream/8a82fb6d-e077-4930-b16d-a47ec1537f4a.jpg",
-  },
-  {
-    name: "Building ios15 App",
-    author: "Tom Collins",
-    value: 11,
-    image:
-      "https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg",
   },
   {
     name: "Excel: Formulas and functions",

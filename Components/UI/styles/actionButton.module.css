@@ -1,0 +1,13 @@
+.action-button {
+  /* flex: 1; */
+  border-radius: 1rem;
+  background-color: #2e8dff;
+  color: #fbfbfb;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+}
+.action-button:hover{
+  opacity: 0.85;
+}

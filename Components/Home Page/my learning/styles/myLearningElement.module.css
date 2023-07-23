@@ -9,7 +9,7 @@
   margin-bottom: 2rem;
 }
 .myLearning-card:hover {
-  scale: 1.02;
+  /* scale: 1.02; */
   border: 1px solid #2e8dff;
   background-color: #e8eff6;
 }

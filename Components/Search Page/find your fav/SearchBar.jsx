@@ -1,4 +1,4 @@
-import Button from "@/Components/UI/progress bar/Button";
+import Button from "@/Components/UI/Button";
 import styles from "./styles/searchBar.module.css";
 const SearchBar = (props) => {
   return (
