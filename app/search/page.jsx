@@ -11,7 +11,7 @@ const Search = (props) => {
       <TopSearches />
       <CategoriesSearchPage />
       <RatingLevel />
-      <Recommended />
+      {/* <Recommended /> */}
     </main>
   );
 };
