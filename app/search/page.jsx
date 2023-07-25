@@ -3,7 +3,6 @@ import CategoriesSearchPage from "@/Components/Search Page/categoriesSearchPage/
 import SearchBar from "@/Components/Search Page/find your fav/SearchBar";
 import RatingLevel from "@/Components/Search Page/rating-level/RatingLevel";
 import Recommended from "@/Components/Search Page/recommended for you/Recommended";
-
 const Search = (props) => {
   return (
     <main className="home-container">
@@ -11,7 +10,7 @@ const Search = (props) => {
       <TopSearches />
       <CategoriesSearchPage />
       <RatingLevel />
-      {/* <Recommended /> */}
+      <Recommended />
     </main>
   );
 };
