@@ -1,5 +1,5 @@
 import CoursePreview from "@/components/Courses/Course/CoursePreview";
-import CourseContent from "@/components/Course Content/CourseContent";
+import CourseContent from "@/components/CourseContent/CourseContent";
 
 import styles from "../../courses/coursePage.module.css";
 

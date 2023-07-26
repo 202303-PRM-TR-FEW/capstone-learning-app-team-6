@@ -1,5 +1,5 @@
-import Level from "@/components/Search Page/rating-level/Level";
-import Rating from "@/components/Search Page/rating-level/Rating";
+import Level from "@/components/SearchPage/RatingLevel/Level";
+import Rating from "@/components/SearchPage/RatingLevel/Rating";
 
 import styles from "./styles/ratingLevel.module.css";
 
