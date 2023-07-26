@@ -1,4 +1,4 @@
-import ActionButton from "@/Components/UI/ActionButton";
+import ActionButton from "@/components/UI/ActionButton";
 import styles from "./styles/coursePreview.module.css";
 
 const CoursePreview = (props) => {

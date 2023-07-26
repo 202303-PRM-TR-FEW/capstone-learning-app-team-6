@@ -1,4 +1,4 @@
-import Progress from "@/Components/UI/Progress";
+import Progress from "@/components/UI/Progress";
 import styles from "./styles/achievementsElement.module.css";
 
 const AchievementsElement = (props) => {

@@ -1,7 +1,7 @@
 import { courses } from "@/app/page";
 
-import CoursePreview from "@/Components/Courses/Course/CoursePreview";
-import MyLearningCourses from "@/Components/Courses/MyLearning/MyLearningCourses";
+import CoursePreview from "@/components/Courses/Course/CoursePreview";
+import MyLearningCourses from "@/components/Courses/MyLearning/MyLearningCourses";
 
 import styles from "../courses/coursePage.module.css";
 
@@ -15,7 +15,7 @@ const Courses = (props) => {
         courses={courses.slice(4)}
         isButton={true}
       />
-      <CoursePreview review={"PREVIEW"} action={"BUY NOW"}/>
+      <CoursePreview review={"PREVIEW"} action={"BUY NOW"} />
     </main>
   );
 };

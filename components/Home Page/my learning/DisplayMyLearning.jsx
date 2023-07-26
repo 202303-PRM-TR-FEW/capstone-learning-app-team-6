@@ -1,6 +1,6 @@
-import Progress from "@/Components/UI/Progress";
+import Progress from "@/components/UI/Progress";
 import MyLearningElement from "./MyLearningElement";
-import Button from "@/Components/UI/Button";
+import Button from "@/components/UI/Button";
 
 const DisplayMyLearning = (props) => {
   return props.AllCourses.map((course) => {

@@ -2,8 +2,8 @@ import { courses } from "@/app/page";
 import DisplayMyLearning from "./DisplayMyLearning";
 
 import styles from "./styles/myLearning.module.css";
-import Button from "@/Components/UI/Button";
-import Progress from "@/Components/UI/Progress";
+import Button from "@/components/UI/Button";
+import Progress from "@/components/UI/Progress";
 
 const MyLearning = (props) => {
   return (

@@ -1,5 +1,5 @@
-import DisplayMyLearning from "@/Components/Home Page/my learning/DisplayMyLearning";
-import Button from "@/Components/UI/Button";
+import DisplayMyLearning from "@/components/Home Page/my learning/DisplayMyLearning";
+import Button from "@/components/UI/Button";
 
 const MyLearningCourses = (props) => {
   return (

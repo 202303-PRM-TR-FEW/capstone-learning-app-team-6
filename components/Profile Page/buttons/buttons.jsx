@@ -1,4 +1,4 @@
-import styles from "@/Components/Profile Page/buttons/styles/buttons.module.css";
+import styles from "@/components/Profile Page/buttons/styles/buttons.module.css";
 export default function Buttons() {
   return (
     <div className={styles.buttons}>

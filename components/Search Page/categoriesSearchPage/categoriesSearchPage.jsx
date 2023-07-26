@@ -1,6 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.js";
-import styles from "@/Components/Search Page/categoriesSearchPage/styles/categoriesSearch.module.css";
+import styles from "@/components/Search Page/categoriesSearchPage/styles/categoriesSearch.module.css";
 
 let category = [
   { icon: "fa-solid fa-chart-line", name: "Sales" },
