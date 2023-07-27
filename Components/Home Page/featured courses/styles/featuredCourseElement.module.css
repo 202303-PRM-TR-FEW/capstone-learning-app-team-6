@@ -6,8 +6,9 @@
   /* width: 100%; */
   cursor: pointer;
 }
+
 .course-card:hover {
-  scale: 1.02;
+  scale: 1.01;
 }
 
 .course-image__container {

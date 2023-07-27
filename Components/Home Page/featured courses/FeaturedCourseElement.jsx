@@ -1,17 +1,74 @@
 "use client";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import styles from "./styles/featuredCourseElement.module.css";
 import { styled } from "styled-components";
+import { useState, useEffect } from "react";
+import db from "../../../firebase";
 
-const Button = styled.button`
+const PriceBox = styled.span`
   background-color: #2e8dff;
   color: #fbfbfb;
-  font-size: 1.5rem;
-  padding: 0.5rem 1.2rem;
-  border-radius: 2rem;
-  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+`;
+
+const ButtonContainer = styled.div`
+  position: relative;
+  color: #333;
+`;
+
+const BookmarkButton = styled.button`
+  background: rgba(128, 128, 128, 0.5);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  position: absolute;
+  top: -18rem;
+  right: 0.5rem;
+
+  .bookmark-icon {
+    color: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &:hover {
+    transform: scale(1.15);
+  }
 `;
 
 const FeaturedCourseElement = (props) => {
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  useEffect(() => {
+    const checkIfBookmarked = async () => {
+      const q = query(
+        collection(db, "savedCourses"),
+        where("name", "==", props.name)
+      );
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        setIsBookmarked(true);
+      }
+    };
+    checkIfBookmarked();
+  }, [props.name]);
+
+  const handleBookmark = async () => {
+    try {
+      await addDoc(collection(db, "savedCourses"), {
+        name: props.name,
+        image: props.image,
+        duration: props.duration,
+        rate: props.rate,
+        price: props.price,
+      });
+      setIsBookmarked(true);
+      alert("Course bookmarked successfully");
+    } catch (error) {
+      console.error("Error bookmarking course: ", error);
+    }
+  };
+
   return (
     <li key={props.key} className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
@@ -50,7 +107,25 @@ const FeaturedCourseElement = (props) => {
           </svg>
           {props.rate}/5
         </p>
-        <Button>${props.price}</Button>
+        <ButtonContainer>
+          <PriceBox>${props.price}</PriceBox>
+          <BookmarkButton onClick={handleBookmark}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="bookmark-icon"
+              fill={isBookmarked ? "blue" : "currentColor"}
+              viewBox="0 0 24 24"
+              stroke={isBookmarked ? "blue" : "currentColor"}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6a2 2 0 012-2h12a2 2 0 012 2v14l-8-4-8 4V6z"
+              />
+            </svg>
+          </BookmarkButton>
+        </ButtonContainer>
       </div>
     </li>
   );

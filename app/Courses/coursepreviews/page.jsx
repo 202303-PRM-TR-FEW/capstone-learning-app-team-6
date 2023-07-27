@@ -8,7 +8,7 @@ const CoursePreviews = (props) => {
     <main
       className={`home-container grid-2 ${styles["home-container__courses"]}`}
     >
-      <CoursePreview actionButton={true}/>
+      <CoursePreview actionButton={true} />
       <CourseContent />
     </main>
   );

@@ -1,3 +1,4 @@
+import { styled } from "styled-components";
 import CourseElement from "./FeaturedCourseElement";
 
 const DisplayCourses = (props) => {
