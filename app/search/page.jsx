@@ -1,8 +1,8 @@
-import TopSearches from "@/Components/Search Page/top searches/TopSearches";
-import CategoriesSearchPage from "@/Components/Search Page/categoriesSearchPage/categoriesSearchPage";
-import SearchBar from "@/Components/Search Page/find your fav/SearchBar";
-import RatingLevel from "@/Components/Search Page/rating-level/RatingLevel";
-import Recommended from "@/Components/Search Page/recommended for you/Recommended";
+import TopSearches from "@/Components/SearchPage/TopSearches/TopSearches";
+import CategoriesSearchPage from "@/Components/SearchPage/CategoriesSearchPage/categoriesSearchPage";
+import SearchBar from "@/Components/SearchPage/FindYourFav/SearchBar";
+import RatingLevel from "@/Components/SearchPage/RatingLevel/RatingLevel";
+import Recommended from "@/Components/SearchPage/RecommendedForYou/Recommended";
 
 const Search = (props) => {
   return (
@@ -11,7 +11,7 @@ const Search = (props) => {
       <TopSearches />
       <CategoriesSearchPage />
       <RatingLevel />
-      <Recommended />
+      {/* <Recommended /> */}
     </main>
   );
 };

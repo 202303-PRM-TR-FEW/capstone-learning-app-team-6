@@ -1,3 +1,5 @@
+import Signup from "./signup/Signup";
+import FirstPage from './landing/firstPage'
 const courses = [
   {
     name: "Building ios15 App",
@@ -12,7 +14,7 @@ const courses = [
     rate: "",
     value: 11,
     content: [
-      { name: "Introduction", videos: 1 },
+      { name: "Introduction new", videos: 1 },
       { name: "1. Software setup", videos: 3 },
       { name: "2. UI Fundamentals", videos: 6 },
       { name: "3. Testing and Finishing", videos: 2 },
@@ -81,7 +83,9 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <h1 style={{ fontSize: "24px", fontWeight: 600 }}>
+      <FirstPage />
+      {/* <Signup /> */}
+      {/* <h1 style={{ fontSize: "24px", fontWeight: 600 }}>
         This is the (landing) page
         <br />
         Try Navigating to:
@@ -95,7 +99,7 @@ export default function Home() {
           search{" "}
         </a>
       </h1>
-    </main>
+ */}    </main>
   );
 }
 
