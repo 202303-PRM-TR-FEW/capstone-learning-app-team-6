@@ -1,5 +1,3 @@
-import Signup from "./signup/Signup";
-import FirstPage from './landing/firstPage'
 const courses = [
   {
     name: "Building ios15 App",
@@ -83,9 +81,7 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <FirstPage />
-      {/* <Signup /> */}
-      {/* <h1 style={{ fontSize: "24px", fontWeight: 600 }}>
+      <h1 style={{ fontSize: "24px", fontWeight: 600 }}>
         This is the (landing) page
         <br />
         Try Navigating to:
@@ -99,7 +95,7 @@ export default function Home() {
           search{" "}
         </a>
       </h1>
- */}    </main>
+    </main>
   );
 }
 
