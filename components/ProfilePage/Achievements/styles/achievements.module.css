@@ -1,0 +1,26 @@
+.header-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  margin-left: 6rem;
+  /* border: 1px solid red; */
+  width: 50rem;
+  margin-top: 3rem;
+}
+
+.cards-container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  margin-left: 6rem;
+  /* border: 1px solid red; */
+  
+}
+
+@media (max-width: 800px) {
+  .cards-container {
+    flex-direction: column;
+  }
+}

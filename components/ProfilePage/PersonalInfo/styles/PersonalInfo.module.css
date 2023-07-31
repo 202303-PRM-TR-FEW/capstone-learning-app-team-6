@@ -1,0 +1,85 @@
+.main {
+  margin-left: 7rem;
+  display: flex;
+  position: relative;
+  width: 100rem;
+  height: 10rem;
+  margin-top: 4rem
+}
+
+.img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.img:hover {
+  scale: 1.02;
+}
+
+.name {
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+
+.name:hover {
+  scale: 1.02;
+}
+
+.citye {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  font-weight: 700;
+}
+
+.box {
+  width: 50rem;
+  height: 12rem;
+  border: 6px solid rgb(253, 252, 252);
+  margin-left: 3rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  background-color: rgb(239, 239, 239);
+}
+
+.gryBox {
+  width: 12rem;
+  background-color: rgb(239, 239, 239);
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(116, 116, 116);
+  margin: .5rem;
+}
+
+.numbers {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+@media (max-width: 800px) {
+  .box {
+    display: flex;
+    top: 30rem;
+    position: fixed;
+    left: 10rem;
+    width: 20rem;
+  }
+
+  .gryBox {
+    width: 5rem;
+    background-color: rgb(239, 239, 239);
+  }
+
+  .numbers {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem;
+  }
+}

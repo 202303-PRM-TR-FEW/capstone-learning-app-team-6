@@ -12,7 +12,7 @@ const courses = [
     rate: "",
     value: 11,
     content: [
-      { name: "Introduction new", videos: 1 },
+      { name: "Introduction", videos: 1 },
       { name: "1. Software setup", videos: 3 },
       { name: "2. UI Fundamentals", videos: 6 },
       { name: "3. Testing and Finishing", videos: 2 },
