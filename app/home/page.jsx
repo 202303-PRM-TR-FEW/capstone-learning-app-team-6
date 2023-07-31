@@ -1,6 +1,6 @@
-import Categories from "@/Components/Home Page/categories/Categories";
-import FeaturedCourses from "@/Components/Home Page/featured courses/FeaturedCourses";
-import MyLearning from "@/Components/Home Page/my learning/MyLearning";
+import Categories from "@/components/HomePage/Categories/Categories";
+import FeaturedCourses from "@/components/HomePage/FeaturedCourses/FeaturedCourses";
+import MyLearning from "@/components/HomePage/MyLearning/MyLearning";
 
 const Home = (props) => {
   return (

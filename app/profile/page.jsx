@@ -1,9 +1,9 @@
-import PersonalInfo from "@/components/Profile Page/personal info/PersonalInfo";
-import TotalStatistics from "@/components/Profile Page/total statistics/TotalStatistics";
-import Achievements from "@/Components/Profile Page/achievements/Achievements";
-import FriendSuggestions from "@/Components/Profile Page/friend suggestion/friend-suggestion";
-import Friends from "@/Components/Profile Page/friends/friends";
-import Button from "@/Components/Profile Page/buttons/buttons";
+import PersonalInfo from "@/components/ProfilePage/PersonalInfo/PersonalInfo";
+import TotalStatistics from "@/components/ProfilePage/TotalStatistics/TotalStatistics";
+import Achievements from "@/components/ProfilePage/Achievements/Achievements";
+import FriendSuggestions from "@/components/ProfilePage/FriendSuggestion/friend-suggestion";
+import Friends from "@/components/ProfilePage/Friends/friends";
+import Button from "@/components/ProfilePage/Buttons/buttons";
 import styles from "./profilePage.module.css";
 
 const Profile = (props) => {
