@@ -2,21 +2,18 @@
 import React, { useState, useEffect } from "react";
 import DisplayCourses from "./DisplayCourses";
 import styles from "./styles/featuredCourses.module.css";
-import { collection, getDocs } from "firebase/firestore";
-import db from "../../../firebase";
+import { fetchCourses } from "@/Components/Fetching/fetching";
 
 const FeaturedCourses = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    const fetchCourses = async () => {
-      const courseCollection = collection(db, "courses");
-      const courseSnapshot = await getDocs(courseCollection);
-      const courseList = courseSnapshot.docs.map((doc) => doc.data());
+    const fetchAllCourses = async () => {
+      const courseList = await fetchCourses();
       setCourses(courseList);
     };
 
-    fetchCourses();
+    fetchAllCourses();
   }, []);
 
   return (

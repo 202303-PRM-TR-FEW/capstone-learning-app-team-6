@@ -1,9 +1,11 @@
 "use client";
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import styles from "./styles/featuredCourseElement.module.css";
 import { styled } from "styled-components";
 import { useState, useEffect } from "react";
-import db from "../../../firebase";
+import {
+  checkIfBookmarked,
+  bookmarkCourse,
+} from "@/Components/Fetching/fetching";
 
 const PriceBox = styled.span`
   background-color: #2e8dff;
@@ -40,22 +42,16 @@ const FeaturedCourseElement = (props) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   useEffect(() => {
-    const checkIfBookmarked = async () => {
-      const q = query(
-        collection(db, "savedCourses"),
-        where("name", "==", props.name)
-      );
-      const querySnapshot = await getDocs(q);
-      if (!querySnapshot.empty) {
-        setIsBookmarked(true);
-      }
+    const fetchBookmarkStatus = async () => {
+      const status = await checkIfBookmarked(props.name);
+      setIsBookmarked(status);
     };
-    checkIfBookmarked();
+    fetchBookmarkStatus();
   }, [props.name]);
 
   const handleBookmark = async () => {
     try {
-      await addDoc(collection(db, "savedCourses"), {
+      await bookmarkCourse({
         name: props.name,
         image: props.image,
         duration: props.duration,
@@ -63,7 +59,6 @@ const FeaturedCourseElement = (props) => {
         price: props.price,
       });
       setIsBookmarked(true);
-      alert("Course bookmarked successfully");
     } catch (error) {
       console.error("Error bookmarking course: ", error);
     }

@@ -1,27 +1,20 @@
 "use client";
-import { getDocs, collection } from "firebase/firestore";
-import db from "@/firebase";
-import React, { useState, useEffect } from "react";
-
+import { useState, useEffect } from "react";
 import CoursePreview from "@/Components/Courses/Course/CoursePreview";
 import MyLearningCourses from "@/Components/Courses/MyLearning/MyLearningCourses";
-
 import styles from "../courses/coursePage.module.css";
+import { fetchSavedCourses } from "@/Components/Fetching/fetching";
 
 const Courses = (props) => {
   const [savedCourses, setSavedCourses] = useState([]);
 
   useEffect(() => {
-    const fetchSavedCourses = async () => {
-      const querySnapshot = await getDocs(collection(db, "savedCourses"));
-      let courses = [];
-      querySnapshot.forEach((doc) => {
-        courses.push(doc.data());
-      });
+    const fetchCourses = async () => {
+      const courses = await fetchSavedCourses();
       setSavedCourses(courses);
     };
 
-    fetchSavedCourses();
+    fetchCourses();
   }, []);
 
   return (
