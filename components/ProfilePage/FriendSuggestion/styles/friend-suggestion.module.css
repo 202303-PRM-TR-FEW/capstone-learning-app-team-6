@@ -8,7 +8,6 @@
   width: 80rem;
   margin-left: 70rem;
   box-sizing: border-box;
-
 }
 
 .title {
@@ -28,7 +27,6 @@
   /* border: 1px solid red; */
   margin-left: 5rem;
   height: 20rem;
-
 }
 
 .friendsContainer {
@@ -66,7 +64,6 @@
   width: 75rem;
 }
 
-
 .friendName {
   width: 30rem;
   text-align: left;
@@ -97,7 +94,6 @@
   /* border: 1px solid rgb(255, 89, 0); */
   margin-left: 30rem;
   margin-top: 1rem;
-
 }
 
 .friendClose {
@@ -117,7 +113,6 @@
   margin-left: 1rem;
   margin-right: auto;
 }
-
 
 @media (max-width: 1000px) {
   .container {

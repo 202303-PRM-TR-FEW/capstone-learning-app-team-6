@@ -1,4 +1,3 @@
-
 .main {
   display: flex;
   flex-direction: column;
@@ -13,10 +12,10 @@
   border-radius: 1rem;
   cursor: pointer;
   justify-content: flex-start;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   /* border: 1px solid red; */
   height: 12rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   width: 75rem;
   position: relative;
 }
@@ -79,7 +78,6 @@
   margin-top: 14rem;
   font-weight: 700;
   position: absolute;
-
 }
 
 .author-name {
@@ -90,7 +88,6 @@
 
 .progress-container {
   width: 100%;
-
 }
 
 .progress-bar {
