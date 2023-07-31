@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import {
   checkIfBookmarked,
   bookmarkCourse,
-} from "@/Components/Fetching/fetching";
+} from "@/components/Fetching/fetching";
 
 const PriceBox = styled.span`
   background-color: #2e8dff;
