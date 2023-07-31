@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} style={{ display: "flex" }}>
         <header>
-          <Navbar />
+          {/* <Navbar /> */}
         </header>
         <main style={{ flex: 1 }}>{children}</main>
       </body>
