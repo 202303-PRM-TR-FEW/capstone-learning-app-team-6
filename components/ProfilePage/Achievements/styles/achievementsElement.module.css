@@ -1,0 +1,109 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.myLearning-card {
+  max-width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  /* border: 1px solid red; */
+  height: 12rem;
+  margin-top: 0.5rem;
+  width: 75rem;
+  position: relative;
+}
+
+.myLearning-card:hover {
+  scale: 1.02;
+}
+
+.image-container {
+  width: 10rem;
+  height: 100%;
+}
+
+.image-container img {
+  width: 8rem;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.text {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 65%;
+  padding-right: 2rem;
+  height: 100%;
+  gap: 2rem;
+  font-size: 1rem;
+  margin-bottom: 10rem;
+}
+
+.course {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 7rem;
+  font-size: 2rem;
+}
+
+.course h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+.course svg {
+  fill: #b1b1b1;
+  border: 1px solid red;
+}
+
+.task {
+  color: gray;
+  width: 2rem;
+  margin-left: 40rem;
+  position: absolute;
+  margin-top: 6rem;
+}
+
+.aim {
+  color: rgb(45, 45, 45);
+  margin-top: 14rem;
+  font-weight: 700;
+  position: absolute;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+.progress-container {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  accent-color: red;
+}
+
+.progress-container p {
+  color: #686868;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid red;
+}
+
+@media (max-width: 800px) {
+  .myLearning-card {
+    width: 100%;
+  }
+}

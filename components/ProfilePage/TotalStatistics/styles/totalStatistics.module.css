@@ -1,0 +1,39 @@
+.header-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.features-container {
+  max-width: 50%;
+  margin-bottom: 1rem;
+  padding-left: 6rem;
+  margin-top: 12rem;
+  /* border: 1px solid red; */
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+}
+
+@media (max-width: 950px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-top: 20rem;
+  }
+  .header-text{
+    margin-top: 40rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+}
