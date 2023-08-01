@@ -3,9 +3,14 @@ import MyLearningElement from "./MyLearningElement";
 import Button from "@/Components/UI/Button";
 
 const DisplayMyLearning = (props) => {
+  const getClickedCourse = (event) => {
+    console.log(event);
+    console.log("Clicked ");
+  };
   return props.AllCourses.map((course) => {
     return (
       <MyLearningElement
+        onClick={() => console.log("Course Clicked")}
         key={course.name}
         name={course.name}
         image={course.image}

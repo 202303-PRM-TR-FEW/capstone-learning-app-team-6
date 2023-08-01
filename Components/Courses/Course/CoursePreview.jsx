@@ -1,18 +1,37 @@
-import ActionButton from "@/Components/UI/ActionButton";
+"use client";
+import { useState } from "react";
+import { courses } from "@/app/page";
+import Link from "next/link";
+
 import styles from "./styles/coursePreview.module.css";
 
 const CoursePreview = (props) => {
+  const reviewBtnHandler = () => {
+    if (typeof props.getClickedCourseName === "function") {
+      // Proceed with calling the function
+      courses.some((course) => {
+        if (course.name.trim() == props.displayedCourse.name.trim()) {
+          console.log(course.name);
+          props.getClickedCourseName(course);
+        }
+      });
+    } else {
+      console.log(typeof props.getClickedCourseName);
+    }
+  };
+
   return (
     <section className={`${styles["course-preview__container"]} mflex`}>
       <div className={`${styles.container} mflex`}>
         <div className={styles["media-container"]}>
           <img
-            src="https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg"
+            // src="https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg"
+            src={props.displayedCourse.image}
             alt="Course Photo"
           />
         </div>
         <div className={styles["course-content__container"]}>
-          <h2 className={styles.text}>Becoming a Photographer</h2>
+          <h2 className={styles.text}>{props.displayedCourse.name}</h2>
           <div className={`${styles["course-info"]} mflex`}>
             <div className={`${styles["author-container"]} mflex`}>
               <div className={styles["author-image__container"]}>
@@ -21,7 +40,7 @@ const CoursePreview = (props) => {
                   alt="Author's Photo"
                 />
               </div>
-              <h3>Tom Collins</h3>
+              <h3>{props.displayedCourse.author}</h3>
             </div>
             <p className={`${styles["course-duration"]} mflex`}>
               <svg
@@ -36,7 +55,7 @@ const CoursePreview = (props) => {
                   clipRule="evenodd"
                 />
               </svg>
-              43min
+              {props.displayedCourse.duration}
             </p>
             <p className={`${styles["course-rate"]} mflex`}>
               <svg
@@ -51,7 +70,7 @@ const CoursePreview = (props) => {
                   clipRule="evenodd"
                 />
               </svg>
-              4.3/5.0
+              {props.displayedCourse.rate}/5
             </p>
           </div>
         </div>
@@ -66,12 +85,21 @@ const CoursePreview = (props) => {
       </div>
       {!props.actionButton && (
         <div className={`${styles["actions-container"]} mflex`}>
+          {/* <Link
+            className={`${styles["action-button"]} ${styles["action-button__review"]}`}
+            // onClick={reviewBtnHandler}
+            href="/courses/coursepreviews"
+          >
+            {props.reviewBtn}
+          </Link> */}
           <button
             className={`${styles["action-button"]} ${styles["action-button__review"]}`}
+            onClick={reviewBtnHandler}
           >
-            {props.review}
+            {props.reviewBtn}
           </button>
-          <button className={styles["action-button"]}>{props.action}</button>;
+          <button className={styles["action-button"]}>{props.actionBtn}</button>
+          ;
         </div>
       )}
     </section>
