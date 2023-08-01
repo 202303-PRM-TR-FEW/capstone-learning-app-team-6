@@ -4,7 +4,11 @@ const DisplayChapterElements = (props) => {
   return props.course.map((chapter) => {
     return (
       <li style={{ marginBottom: "1rem" }}>
-        <ChapterElement name={chapter.name} video={chapter.videos} />
+        <ChapterElement
+          key={chapter.name}
+          name={chapter.name}
+          video={chapter.videos}
+        />
       </li>
     );
   });
