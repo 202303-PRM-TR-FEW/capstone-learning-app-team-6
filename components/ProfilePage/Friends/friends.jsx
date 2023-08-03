@@ -10,7 +10,7 @@ export default function Friends() {
       <div className={Styles.container}>
         <div>
           <h1 className={Styles.title}>Friends</h1>
-        </div>
+        
         <div className={Styles.friendsContainer}>
           <ul className={`${Styles.friends} rounded-t-[20px]`}>
             {friends.map((friend) => (
@@ -25,6 +25,7 @@ export default function Friends() {
             ))}
             <p className={`${Styles.viewAllFriends} rounded-b-[20px]`}>View All</p>
           </ul>
+        </div>
         </div>
       </div>
     </>

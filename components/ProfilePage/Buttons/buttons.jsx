@@ -1,4 +1,5 @@
 import styles from "@/components/ProfilePage/Buttons/styles/buttons.module.css";
+
 export default function Buttons() {
   return (
     <div className={styles.buttons}>

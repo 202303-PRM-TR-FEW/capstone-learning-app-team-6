@@ -1,4 +1,4 @@
-import { getDocs, collection, addDoc, query, where } from "firebase/firestore";
+/* import { getDocs, collection, addDoc, query, where } from "firebase/firestore";
 import db from "@/firebase.js";
 
 export const fetchCourses = async () => {
@@ -34,3 +34,4 @@ export const bookmarkCourse = async (course) => {
     price: course.price,
   });
 };
+ */

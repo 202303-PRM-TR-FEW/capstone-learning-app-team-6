@@ -1,5 +1,4 @@
 import DisplayAchievements from "./DisplayAchievements";
-
 import styles from "./styles/achievements.module.css";
 
 const courses = [

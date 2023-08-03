@@ -1,47 +1,39 @@
 .container {
-  padding-right: 5rem;
   display: flex;
-  position: relative;
-  /* border: 1px solid red; */
-  float: right;
-  bottom: 80rem;
-  width: 80rem;
-  margin-left: 70rem;
+  border: 1px solid red;
+  width: 40wv;
+  height: 60vh;
+  margin-left: 1rem;
   box-sizing: border-box;
 }
 
 .title {
-  margin-top: 3rem;
+  width: 20rem;
+  margin-top: 4rem;
   font-size: 2.5rem;
   font-weight: 600;
-  position: absolute;
-  top: 0;
-  margin-bottom: 20rem;
-  margin-left: 5rem;
+  margin-left: 1rem;
 }
 
 .friends {
-  float: right;
-  clear: right;
+  border: 2px solid blue;
   background-color: white;
-  /* border: 1px solid red; */
-  margin-left: 5rem;
+  margin-left: 1rem;
+  width: 40wv;
   height: 20rem;
 }
 
 .friendsContainer {
-  margin-top: 8rem;
+  width: 88vh;
+  margin-top: 1rem;
 }
 
 .newFriend {
   position: relative;
   text-align: center;
-  float: left;
-  clear: left;
   display: flex;
   padding: 1rem;
-  width: 70rem;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   float: right;
   height: 7rem;
   margin-right: 5rem;
@@ -58,10 +50,10 @@
   text-align: start;
   color: rgb(46 141 255);
   height: 6rem;
-  /* border: 1px solid rgb(0, 255, 106); */
+  border: 1px solid rgb(0, 255, 106);
   margin-top: 17rem;
   background-color: white;
-  width: 75rem;
+  width: 40vw;
 }
 
 .viewAllFriends:hover {
@@ -69,10 +61,11 @@
 }
 
 .friendName {
-  width: 30rem;
+  border: solid;
+  width: 20rem;
   text-align: left;
-  padding-left: 2rem;
-  font-size: 2rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-top: 2rem;
 }
@@ -96,10 +89,10 @@
   color: rgb(46 141 255);
   font-weight: 600;
   margin-top: 1.5rem;
-  font-size: 2rem;
-  margin-left: 25rem;
+  font-size: 1.5rem;
+  margin-left: 15rem;
 }
-
+/* 
 @media (max-width: 1000px) {
   .container {
     flex-direction: column;
@@ -119,3 +112,4 @@
     margin-right: 0rem;
   }
 }
+ */
