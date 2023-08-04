@@ -13,13 +13,15 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 41vw;
+  width: 55rem;
   margin-left: 4rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
+/* 
 @media (max-width: 800px) {
   .cards-container {
     flex-direction: column;
   }
 }
+ */

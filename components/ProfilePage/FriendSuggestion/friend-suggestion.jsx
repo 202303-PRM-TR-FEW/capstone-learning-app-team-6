@@ -23,7 +23,7 @@ export default function FriendSuggestions() {
                     <button className={Styles.friendClose}>X</button>
                   </div>
                 </div>
-                <hr className={Styles.horizontalLine} />
+               {/*  <hr className={Styles.horizontalLine} /> */}
               </li>
             ))}
             <p

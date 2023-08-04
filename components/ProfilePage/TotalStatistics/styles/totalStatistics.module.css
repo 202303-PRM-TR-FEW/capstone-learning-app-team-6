@@ -6,12 +6,11 @@
 }
 
 .features-container {
-  width: 92vh;
+  width: 55rem;
   margin-bottom: 1rem;
   margin-left: 3rem;
   padding-left: 2rem;
-  margin-top: 8rem;
-  border: 1px solid black;
+  margin-top:2rem;
 }
 
 .cards-container {
@@ -20,6 +19,7 @@
   gap: 0.2rem;
 }
 
+/* 
 @media (max-width: 950px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -36,4 +36,4 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
   }
-}
+} */

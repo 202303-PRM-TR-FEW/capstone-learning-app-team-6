@@ -13,9 +13,9 @@
   justify-content: flex-start;
   margin-bottom: 0.5rem;
 
-  border: 1px solid black;
+/*   border: 1px solid black; */
 
-  width: 88vh;
+  width: 55rem;
   height: 10rem;
   margin-top: 0.5rem;
 }
@@ -87,11 +87,11 @@
 }
 
 .progress-container {
-  width: 50vh;
+  width: 50rem;
 }
 
 .progress-bar {
-  width: 50vh;
+  width: 50rem;
   accent-color: red;
 }
 
@@ -101,9 +101,10 @@
   font-weight: 500;
   border: 1px solid red;
 }
-
+/* 
 @media (max-width: 800px) {
   .myLearning-card {
     width: 100%;
   }
 }
+ */

@@ -1,10 +1,9 @@
-.main {
-  margin-left: 3rem;
+.main {  
   display: flex;
-  width: 100vh;
-  height: 10rem;
+  width: 58rem;
+  height: 18rem;
+  margin-left: 3rem;
   margin-top: 2rem;
-  background-color:gray;
 }
 
 .img {
@@ -33,7 +32,7 @@
 }
 
 .box {
-  width: 60vh;
+  width: 35rem;
   height: 10rem;
   border: 6px solid rgb(253, 252, 252);
   margin-left: 1rem;
@@ -63,24 +62,3 @@
   font-weight: 700;
   margin: 0.5rem;
 }
- 
-@media (max-width: 800px) {
-  .box {
-    display: flex;
-    top: 30rem;
-    position: fixed;
-    left: 10rem;
-    width: 20rem;
-  }
-
-  .gryBox {
-    width: 3rem;
-    background-color: rgb(239, 239, 239);
-  }
-
-  .numbers {
-    font-size: 0.5rem;
-    font-weight: 700;
-    margin: 0.5rem;
-  }
-} 

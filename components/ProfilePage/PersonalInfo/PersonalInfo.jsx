@@ -13,7 +13,7 @@ const profile = {
 const Profile = () => {
   return (
     <div
-      className={`main flex flex-row gap-x-5 m-20 p-4 w-screen h-1/2 ${Styles.main}`}
+      className={`main flex flex-row gap-x-5 p-4 ${Styles.main}`}
     >
       <div>
         <Image

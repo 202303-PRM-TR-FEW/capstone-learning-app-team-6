@@ -1,37 +1,39 @@
 .container {
   display: flex;
-  border: 1px solid red;
-  width: 40vw;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  width: 60rem;
+  height: 29rem;
   margin-left: 1rem;
   box-sizing: border-box;
 }
 
 .title {
+  width: 50rem;
+  height: 4rem;
   margin-top: 2rem;
   font-size: 2.5rem;
   font-weight: 600;
-  position: absolute;
-  top: 0;
   margin-left: 1rem;
 }
 
 .friendSuggestions {
   background-color: white;
-  border: 1px solid red;
+  /* border: 2px solid red; */
   margin-left: 1rem;
   height: 20rem;
-  width: 40vw;
+  width: 55rem;
 }
 
 .friendsContainer {
-  margin-top: 7rem;
+  margin-top: 1rem;
 }
 
 .newFriend {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   height: 7rem;
   width: 50rem;
   margin-right: 5rem;
@@ -48,10 +50,10 @@
   font-weight: 700;
   color: rgb(46 141 255);
   height: 6rem;
-  border: 1px solid rgb(0, 255, 106);
+  /* border: 1px solid rgb(0, 255, 106); */
   margin-top:1rem;
   background-color: white;
-  width: 40vw;
+  width: 55rem;
 }
 
 .friendName {
@@ -61,7 +63,7 @@
   font-weight: 700;
   margin-top: 2rem;
   border: 2px solid black ;
-  width: 100rem;
+  width: 30rem;
 }
 
 .friendImg {
