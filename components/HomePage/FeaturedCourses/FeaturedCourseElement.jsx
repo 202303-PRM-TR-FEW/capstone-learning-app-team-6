@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import {
   checkIfBookmarked,
   bookmarkCourse,
-} from "@/components/Fetching/fetching";
+} from "@/Components/Fetching/fetching";
 
 const PriceBox = styled.span`
   background-color: #2e8dff;
@@ -70,7 +70,7 @@ const FeaturedCourseElement = (props) => {
   };
 
   return (
-    <li key={props.key} className={`${styles["course-card"]} mflex`}>
+    <li key={props.id} className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
         <img src={props.image} />
       </div>

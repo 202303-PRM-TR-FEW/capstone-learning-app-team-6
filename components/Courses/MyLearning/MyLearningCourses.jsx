@@ -1,26 +1,28 @@
 import DisplayMyLearning from "@/Components/HomePage/MyLearning/DisplayMyLearning";
 import { courses } from "@/app/page";
-
+import { fetchedCourses } from "@/Components/Fetching/fetching";
 import Button from "@/components/UI/Button";
 
 const MyLearningCourses = (props) => {
   const getClickedCourse = (event) => {
+    console.log(event.target.closest("li"));
     // console.log(event.target.closest("li").querySelector("h2").textContent);
     const liExist = event.target.closest("li");
 
     if (liExist !== null) {
-      const clickedCourseName = event.target
+      const clickedCourseID = event.target
         .closest("li")
-        .querySelector("h2").textContent;
+        .getAttribute("data-courseid");
 
-      console.log(clickedCourseName.trim(), typeof clickedCourseName);
-      courses.some((course) => {
-        if (course.name.trim() == clickedCourseName.trim()) {
+      console.log(clickedCourseID, typeof clickedCourseID);
+      props.coursesSource.some((course) => {
+        if (course.id == clickedCourseID) {
           console.log(course);
-          console.log(typeof props.getClickedCourseName);
+          console.log(typeof props.clickedCourseID);
           props.getClickedCourseName(course);
         }
       });
+      console.log("after", clickedCourseID);
     } else return;
   };
   return (
