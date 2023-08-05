@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
   const pathname = usePathname();
 
-  if (pathname === "/") {
+  if (pathname === "/" || pathname === "/signin") {
     return null;
   }
 
