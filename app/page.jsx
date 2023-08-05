@@ -64,7 +64,6 @@ const courses = [
     image:
       "https://i.etsystatic.com/21944704/r/il/2a028b/3175957310/il_fullxfull.3175957310_3802.jpg",
   },
-  ,
   {
     name: "Typeface Design",
     author: "Gary Saltz",
@@ -113,7 +112,7 @@ const firstPage = () => {
             </p>
           </div>
           <div>
-            <Link href="/home">
+            <Link href="/signin">
               <button className="bg-blue-600 hover:bg-blue-500 text-white text-lg p-1 font-bold w-52 h-12 mt-10 tracking-wide rounded-xl">
                 GET STARTED
               </button>
