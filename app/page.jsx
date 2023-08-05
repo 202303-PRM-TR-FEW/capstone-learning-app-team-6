@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const courses = [
   {
+    id: "1",
     name: "Building ios15 App",
     author: "Tom Collins",
     category: "test",
@@ -24,6 +25,7 @@ const courses = [
     ],
   },
   {
+    id: "2",
     name: "Becoming a Photographer",
     author: "Clara Manning",
     value: 69,
@@ -44,6 +46,7 @@ const courses = [
       "https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg",
   },
   {
+    id: "3",
     name: "Design Thinking 2.0",
     author: "Chris Kinley",
     value: 27,
@@ -51,6 +54,7 @@ const courses = [
       "https://assets.api.uizard.io/api/cdn/stream/2c1a496b-9948-4cb1-b87e-dbd417261382.jpg",
   },
   {
+    id: "4",
     name: "Product Photography",
     author: "Lena Gold",
     value: 11,
@@ -58,14 +62,15 @@ const courses = [
       "https://assets.api.uizard.io/api/cdn/stream/937fc2b0-e1c5-4a5a-93f7-34d23cd5ca6d.jpg",
   },
   {
+    id: "5",
     name: "Learn how to make portraits",
     author: "Maria Silver",
     value: 27,
     image:
       "https://i.etsystatic.com/21944704/r/il/2a028b/3175957310/il_fullxfull.3175957310_3802.jpg",
   },
-  ,
   {
+    id: "6",
     name: "Typeface Design",
     author: "Gary Saltz",
     value: 27,
@@ -73,6 +78,7 @@ const courses = [
       "https://assets.api.uizard.io/api/cdn/stream/8a82fb6d-e077-4930-b16d-a47ec1537f4a.jpg",
   },
   {
+    id: "7",
     name: "Excel: Formulas and functions",
     author: "Mike Curtis",
     value: 27,
