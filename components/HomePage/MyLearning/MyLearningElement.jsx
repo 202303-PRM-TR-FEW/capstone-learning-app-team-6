@@ -3,7 +3,10 @@ import styles from "./styles/myLearningElement.module.css";
 const MyLearningElement = (props) => {
   return (
     <>
-      <li className={`${styles["myLearning-card"]} mflex`}>
+      <li
+        className={`${styles["myLearning-card"]} mflex`}
+        data-courseid={props.id}
+      >
         <div className={styles["image-container"]}>
           <img src={props.image} />
         </div>

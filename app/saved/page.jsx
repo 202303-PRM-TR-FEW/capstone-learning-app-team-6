@@ -1,31 +1,39 @@
 "use client";
 import { useState, useEffect } from "react";
 import { courses } from "@/app/page";
-import CoursePreview from "@/components/Courses/Course/CoursePreview";
-import MyLearningCourses from "@/components/Courses/MyLearning/MyLearningCourses";
+import CoursePreview from "@/Components/Courses/Course/CoursePreview";
+import MyLearningCourses from "@/Components/Courses/MyLearning/MyLearningCourses";
 
 import styles from "../courses/coursePage.module.css";
-import { fetchSavedCourses } from "@/Components/Fetching/fetching";
+import {
+  fetchSavedCourses,
+  fetchedCourses,
+} from "@/Components/Fetching/fetching";
 
-const Courses = (props) => {
-  const [displayCourse, setDisplayCourse] = useState(courses[4]);
-
+const SavedCourses = (props) => {
+  const [displayCourse, setDisplayCourse] = useState(courses[1]);
   const renderClickedCourse = (courseName) => {
-    // console.log(courses.indexOf(courseName));
-    const clickedCourseIndex = courses.indexOf(courseName);
-    setDisplayCourse(courses[clickedCourseIndex]);
-    // console.log(displayCourse);
+    const clickedCourseIndex = fetchedCourses.indexOf(courseName);
+    console.log(clickedCourseIndex);
+    console.log("fetchedCourses", fetchedCourses);
+    console.log(typeof fetchedCourses);
+    setDisplayCourse(fetchedCourses[clickedCourseIndex]);
   };
-  const [savedCourses, setSavedCourses] = useState([]);
 
+  const [savedCourses, setSavedCourses] = useState([courses[0]]);
   useEffect(() => {
     const fetchCourses = async () => {
-      const courses = await fetchSavedCourses();
-      setSavedCourses(courses);
+      const newlyFetchedCourses = await fetchSavedCourses();
+      setSavedCourses(newlyFetchedCourses);
     };
 
     fetchCourses();
   }, []);
+  console.log("savedCourses");
+  console.log(savedCourses);
+  // useEffect(() => {
+  //   setDisplayCourse(fetchedCourses[0]);
+  // }, [fetchedCourses]);
 
   return (
     <main
@@ -34,11 +42,13 @@ const Courses = (props) => {
       <MyLearningCourses
         header={"Saved Courses"}
         courses={savedCourses}
+        coursesSource={fetchedCourses}
         isButton={true}
         getClickedCourseName={renderClickedCourse}
       />
       <CoursePreview
         displayedCourse={displayCourse}
+        coursesSource={fetchedCourses}
         reviewBtn={"PREVIEW"}
         actionBtn={"BUY NOW"}
       />
@@ -46,4 +56,4 @@ const Courses = (props) => {
   );
 };
 
-export default Courses;
+export default SavedCourses;

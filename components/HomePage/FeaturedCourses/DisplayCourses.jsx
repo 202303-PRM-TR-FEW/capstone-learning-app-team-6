@@ -5,7 +5,8 @@ const DisplayCourses = (props) => {
   return props.AllCourses.map((course) => {
     return (
       <CourseElement
-        key={course.name}
+        key={course.id}
+        id={course.id}
         name={course.name}
         image={course.image}
         duration={course.duration}

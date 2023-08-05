@@ -11,7 +11,8 @@ const DisplayMyLearning = (props) => {
     return (
       <MyLearningElement
         onClick={() => console.log("Course Clicked")}
-        key={course.name}
+        key={course.id}
+        id={course.id}
         name={course.name}
         image={course.image}
         author={course.author}

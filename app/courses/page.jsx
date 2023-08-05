@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { courses } from "@/app/page";
 
-import CoursePreview from "@/components/Courses/Course/CoursePreview";
-import MyLearningCourses from "@/components/Courses/MyLearning/MyLearningCourses";
+import CoursePreview from "@/Components/Courses/Course/CoursePreview";
+import MyLearningCourses from "@/Components/Courses/MyLearning/MyLearningCourses";
 
 import styles from "./coursePage.module.css";
 const Courses = (props) => {
@@ -22,11 +22,13 @@ const Courses = (props) => {
     >
       <MyLearningCourses
         header={"My Learning"}
-        courses={courses.slice(0, 4)}
+        coursesSource={courses}
+        courses={courses /*.slice(0, 4)*/}
         getClickedCourseName={renderClickedCourse}
       />
       <CoursePreview
         displayedCourse={displayCourse}
+        coursesSource={courses}
         reviewBtn={"REVIEW COURSE"}
         actionBtn={"CONTINUE LEARNING"}
       />
