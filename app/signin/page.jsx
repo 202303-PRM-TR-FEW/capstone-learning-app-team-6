@@ -8,9 +8,11 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+// import { AiOutlineEyeInvisible } from "react-icons/ai";
+// import { AiOutlineEye } from "react-icons/ai";
+
 import styles from "./signinPage.module.css";
-import { AiOutlineEyeInvisible } from "react-icons/ai";
-import { AiOutlineEye } from "react-icons/ai";
 
 const LoginPage = () => {
   const router = useRouter();
