@@ -51,6 +51,11 @@ const FeaturedCourseElement = (props) => {
 
   const handleBookmark = async () => {
     try {
+      const alreadyBookmarked = await checkIfBookmarked(props.name);
+      if (alreadyBookmarked) {
+        alert("This course has already been added!");
+        return;
+      }
       await bookmarkCourse({
         name: props.name,
         image: props.image,
