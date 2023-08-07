@@ -50,6 +50,12 @@ export const bookmarkCourse = async (course) => {
     duration: course.duration,
     rate: course.rate,
     price: course.price,
+    description: course.description,
+    author: course.author,
+    category: course.category,
+    value: course.value,
+    content: course.content,
+    level: course.level,
   });
 };
 

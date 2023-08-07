@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const courses = [
   {
-    id: "1",
+    key: "7dULJZclGhmeVFNhhqY4",
     name: "Building ios15 App",
     author: "Tom Collins",
     category: "test",
@@ -24,102 +24,96 @@ const courses = [
       { name: "Skill Test", videos: 1 },
     ],
   },
-  {
-    id: "2",
-    name: "Becoming a Photographer",
-    author: "Clara Manning",
-    value: 69,
-    category: "test",
-    description: "test",
-    rate: 5.0,
-    duration: "2h",
-    price: 24,
-    level: "test",
-    content: [
-      { name: "Introduction", videos: 1 },
-      { name: "1. Camera Configuration", videos: 4 },
-      { name: "2. Exposures", videos: 7 },
-      { name: "3. Photo Composition", videos: 7 },
-      { name: "Skill Test", videos: 3 },
-    ],
-    image:
-      "https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg",
-  },
-  {
-    id: "3",
-    name: "Design Thinking 2.0",
-    author: "Chris Kinley",
-    value: 27,
-    image:
-      "https://assets.api.uizard.io/api/cdn/stream/2c1a496b-9948-4cb1-b87e-dbd417261382.jpg",
-    content: [
-      { name: "Introduction", videos: 1 },
-      { name: "1. Setting up Lighting", videos: 3 },
-      { name: "2. Product Styling", videos: 5 },
-      { name: "3. Post-processing", videos: 4 },
-      { name: "Skill Test", videos: 1 },
-    ],
-  },
-  {
-    id: "4",
-    name: "Product Photography",
-    author: "Lena Gold",
-    value: 11,
-    image:
-      "https://assets.api.uizard.io/api/cdn/stream/937fc2b0-e1c5-4a5a-93f7-34d23cd5ca6d.jpg",
-    content: [
-      { name: "Introduction", videos: 1 },
-      { name: "1. Setting up Lighting", videos: 3 },
-      { name: "2. Product Styling", videos: 5 },
-      { name: "3. Post-processing", videos: 4 },
-      { name: "Skill Test", videos: 1 },
-    ],
-  },
-  {
-    id: "5",
-    name: "Learn how to make portraits",
-    author: "Maria Silver",
-    value: 27,
-    image:
-      "https://i.etsystatic.com/21944704/r/il/2a028b/3175957310/il_fullxfull.3175957310_3802.jpg",
-    content: [
-      { name: "Introduction", videos: 1 },
-      { name: "1. Understanding Portraiture", videos: 4 },
-      { name: "2. Posing Techniques", videos: 6 },
-      { name: "3. Lighting for Portraits", videos: 5 },
-      { name: "Skill Test", videos: 2 },
-    ],
-  },
-  {
-    id: "6",
-    name: "Typeface Design",
-    author: "Gary Saltz",
-    value: 27,
-    image:
-      "https://assets.api.uizard.io/api/cdn/stream/8a82fb6d-e077-4930-b16d-a47ec1537f4a.jpg",
-    content: [
-      { name: "Introduction", videos: 1 },
-      { name: "1. History of Typefaces", videos: 3 },
-      { name: "2. Typeface Anatomy", videos: 5 },
-      { name: "3. Designing a Typeface", videos: 6 },
-      { name: "Skill Test", videos: 2 },
-    ],
-  },
-  {
-    id: "7",
-    name: "Excel: Formulas and functions",
-    author: "Mike Curtis",
-    value: 27,
-    image:
-      "https://assets.api.uizard.io/api/cdn/stream/6b7ace23-9ec2-4b4e-963f-c0097a8bba79.jpg",
-    content: [
-      { name: "Introduction", videos: 1 },
-      { name: "1. Basic Formulas", videos: 5 },
-      { name: "2. Advanced Formulas", videos: 7 },
-      { name: "3. Functions", videos: 6 },
-      { name: "Skill Test", videos: 3 },
-    ],
-  },
+  // {
+  //   name: "Becoming a Photographer",
+  //   author: "Clara Manning",
+  //   value: 69,
+  //   category: "test",
+  //   description: "test",
+  //   rate: 5.0,
+  //   duration: "2h",
+  //   price: 24,
+  //   level: "test",
+  //   content: [
+  //     { name: "Introduction", videos: 1 },
+  //     { name: "1. Camera Configuration", videos: 4 },
+  //     { name: "2. Exposures", videos: 7 },
+  //     { name: "3. Photo Composition", videos: 7 },
+  //     { name: "Skill Test", videos: 3 },
+  //   ],
+  //   image:
+  //     "https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg",
+  // },
+  // {
+  //   name: "Design Thinking 2.0",
+  //   author: "Chris Kinley",
+  //   value: 27,
+  //   image:
+  //     "https://assets.api.uizard.io/api/cdn/stream/2c1a496b-9948-4cb1-b87e-dbd417261382.jpg",
+  //   content: [
+  //     { name: "Introduction", videos: 1 },
+  //     { name: "1. Setting up Lighting", videos: 3 },
+  //     { name: "2. Product Styling", videos: 5 },
+  //     { name: "3. Post-processing", videos: 4 },
+  //     { name: "Skill Test", videos: 1 },
+  //   ],
+  // },
+  // {
+  //   name: "Product Photography",
+  //   author: "Lena Gold",
+  //   value: 11,
+  //   image:
+  //     "https://assets.api.uizard.io/api/cdn/stream/937fc2b0-e1c5-4a5a-93f7-34d23cd5ca6d.jpg",
+  //   content: [
+  //     { name: "Introduction", videos: 1 },
+  //     { name: "1. Setting up Lighting", videos: 3 },
+  //     { name: "2. Product Styling", videos: 5 },
+  //     { name: "3. Post-processing", videos: 4 },
+  //     { name: "Skill Test", videos: 1 },
+  //   ],
+  // },
+  // {
+  //   name: "Learn how to make portraits",
+  //   author: "Maria Silver",
+  //   value: 27,
+  //   image:
+  //     "https://i.etsystatic.com/21944704/r/il/2a028b/3175957310/il_fullxfull.3175957310_3802.jpg",
+  //   content: [
+  //     { name: "Introduction", videos: 1 },
+  //     { name: "1. Understanding Portraiture", videos: 4 },
+  //     { name: "2. Posing Techniques", videos: 6 },
+  //     { name: "3. Lighting for Portraits", videos: 5 },
+  //     { name: "Skill Test", videos: 2 },
+  //   ],
+  // },
+  // {
+  //   name: "Typeface Design",
+  //   author: "Gary Saltz",
+  //   value: 27,
+  //   image:
+  //     "https://assets.api.uizard.io/api/cdn/stream/8a82fb6d-e077-4930-b16d-a47ec1537f4a.jpg",
+  //   content: [
+  //     { name: "Introduction", videos: 1 },
+  //     { name: "1. History of Typefaces", videos: 3 },
+  //     { name: "2. Typeface Anatomy", videos: 5 },
+  //     { name: "3. Designing a Typeface", videos: 6 },
+  //     { name: "Skill Test", videos: 2 },
+  //   ],
+  // },
+  // {
+  //   name: "Excel: Formulas and functions",
+  //   author: "Mike Curtis",
+  //   value: 27,
+  //   image:
+  //     "https://assets.api.uizard.io/api/cdn/stream/6b7ace23-9ec2-4b4e-963f-c0097a8bba79.jpg",
+  //   content: [
+  //     { name: "Introduction", videos: 1 },
+  //     { name: "1. Basic Formulas", videos: 5 },
+  //     { name: "2. Advanced Formulas", videos: 7 },
+  //     { name: "3. Functions", videos: 6 },
+  //     { name: "Skill Test", videos: 3 },
+  //   ],
+  // },
 ];
 
 const firstPage = () => {

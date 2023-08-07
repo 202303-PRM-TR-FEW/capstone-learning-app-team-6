@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import {
   checkIfBookmarked,
   bookmarkCourse,
-} from "@/Components/Fetching/fetching";
+} from "@/components/Fetching/fetching";
 
 const PriceBox = styled.span`
   background-color: #2e8dff;
@@ -56,13 +56,20 @@ const FeaturedCourseElement = (props) => {
         alert("This course has already been added!");
         return;
       }
-      await bookmarkCourse({
+      const course = {
         name: props.name,
         image: props.image,
         duration: props.duration,
         rate: props.rate,
         price: props.price,
-      });
+        description: props.description,
+        author: props.author,
+        category: props.category,
+        value: props.value,
+        content: props.content,
+        level: props.level,
+      };
+      await bookmarkCourse(course);
       setIsBookmarked(true);
     } catch (error) {
       console.error("Error bookmarking course: ", error);
