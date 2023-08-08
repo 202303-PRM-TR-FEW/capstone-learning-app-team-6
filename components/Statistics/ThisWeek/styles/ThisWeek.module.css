@@ -1,0 +1,54 @@
+.parent {
+  list-style-type: none;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+  text-align: center !important;
+}
+
+.child {
+  margin: 1.5rem;
+}
+
+.ProgressLine {
+  height: 18rem;
+}
+
+.day {
+  font-size: 1.1rem;
+  margin-left: .5rem;
+}
+
+.goal {
+  margin: 5%;
+  margin-left: 0%;
+  margin-right: 2%;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 2rem;
+  width: 70%;
+  text-align: center;
+  border-radius: 2rem;
+  font-weight: 700;
+  background-color: white;
+}
+
+.streak {
+  margin: 5%;
+  margin-right: 0%;
+  margin-left: 2%;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 2rem;
+  width: 70%;
+  text-align: center;
+  border-radius: 2rem;
+  font-weight: 700;
+  background-color: white;
+}
+
+@media (max-width: 1600px) {
+  .parent {
+    margin-bottom: 8rem;
+  }
+}

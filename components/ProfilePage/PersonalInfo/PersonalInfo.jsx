@@ -47,7 +47,6 @@ const Profile = () => {
 
           {profile.city}
         </p>
-
         <div className={`flex flex-row rounded-lg text-center ${Styles.box}`}>
           <div className={`bg-gray-200 rounded-l-[20px] ${Styles.gryBox}`}>
             <p

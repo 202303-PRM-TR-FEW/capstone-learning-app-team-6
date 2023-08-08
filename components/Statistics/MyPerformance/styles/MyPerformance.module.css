@@ -1,0 +1,12 @@
+.container {
+  height: fit-content;
+}
+
+.streak {
+  border: 1px solid rgb(209, 209, 209);
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 2rem;
+  background-color: white;
+}
