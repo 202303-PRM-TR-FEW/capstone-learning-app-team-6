@@ -1,18 +1,37 @@
-import TopSearches from "@/components/SearchPage/TopSearches/TopSearches";
-import CategoriesSearchPage from "@/components/SearchPage/CategoriesSearchPage/categoriesSearchPage";
-import SearchBar from "@/components/SearchPage/FindYourFav/SearchBar";
-import RatingLevel from "@/components/SearchPage/RatingLevel/RatingLevel";
-import Recommended from "@/components/SearchPage/RecommendedForYou/Recommended";
+"use client";
+import TopSearches from "@/Components/SearchPage/TopSearches/TopSearches";
+import CategoriesSearchPage from "@/Components/SearchPage/CategoriesSearchPage/categoriesSearchPage";
+import SearchBar from "@/Components/SearchPage/FindYourFav/SearchBar";
+import RatingLevel from "@/Components/SearchPage/RatingLevel/RatingLevel";
+import Recommended from "@/Components/SearchPage/RecommendedForYou/Recommended";
+
+import { useState } from "react";
+import { courses } from "@/app/page";
 
 const Search = (props) => {
+  let FilteredCourses = [];
+  const [filter, setFilter] = useState("photo");
+  // Update filter state when searchInput changes
+  const handleInputChange = (searchInput) => {
+    setFilter(searchInput); // Update filter state
+  };
+
+  FilteredCourses = courses.filter(
+    (course) =>
+      course.category.toLowerCase().includes(filter.toLowerCase()) ||
+      course.name.toLowerCase().includes(filter.toLowerCase()) ||
+      course.description.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <main className="home-container">
-      <SearchBar />
+      <SearchBar onChange={handleInputChange} />
       <TopSearches />
       <CategoriesSearchPage />
       <RatingLevel />
-      <Recommended />
+      <Recommended filteredCourses={FilteredCourses} />
     </main>
   );
 };
+
 export default Search;
