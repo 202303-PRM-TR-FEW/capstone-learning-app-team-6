@@ -34,3 +34,4 @@ export const bookmarkCourse = async (course) => {
     price: course.price,
   });
 };
+ 

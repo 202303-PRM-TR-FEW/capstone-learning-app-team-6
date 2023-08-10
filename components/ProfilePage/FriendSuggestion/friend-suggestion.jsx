@@ -1,3 +1,4 @@
+
 import Styles from "./styles/friend-suggestion.module.css";
 let friendSuggestions = [
   { name: "Laura Evans", img: "https://i.pravatar.cc/400?img=1" },
@@ -23,7 +24,7 @@ export default function FriendSuggestions() {
                     <button className={Styles.friendClose}>X</button>
                   </div>
                 </div>
-                <hr className={Styles.horizontalLine} />
+               {/*  <hr className={Styles.horizontalLine} /> */}
               </li>
             ))}
             <p

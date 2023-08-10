@@ -9,12 +9,16 @@ import styles from "./profilePage.module.css";
 const Profile = (props) => {
   return (
     <main className={styles["profile-container"]}>
-      <PersonalInfo />
-      <TotalStatistics />
-      <Achievements />
-      <FriendSuggestions />
-      <Friends />
-      <Button />
+      <div className={styles["first"]}>
+        <PersonalInfo />
+        <TotalStatistics />
+        <Achievements />
+      </div>
+      <div className={styles["second"]}>
+        <FriendSuggestions />
+        <Friends />
+        <Button />
+      </div>
     </main>
   );
 };
