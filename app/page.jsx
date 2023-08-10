@@ -8,12 +8,12 @@ const courses = [
     author: "Tom Collins",
     category: "test",
     description: "test",
-    duration: "test",
+    duration: "1h 17min",
     level: "test",
     price: 24,
     image:
       "https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg",
-    rate: "",
+    rate: 4.6,
     value: 11,
     content: [
       { name: "Introduction", videos: 1 },
@@ -29,11 +29,17 @@ const courses = [
     value: 69,
     category: "test",
     description: "test",
-    rate: "",
-    duration: "test",
+    rate: 5.0,
+    duration: "2h",
     price: 24,
     level: "test",
-    content: {},
+    content: [
+      { name: "Introduction", videos: 1 },
+      { name: "1. Camera Configuration", videos: 4 },
+      { name: "2. Exposures", videos: 7 },
+      { name: "3. Photo Composition", videos: 7 },
+      { name: "Skill Test", videos: 3 },
+    ],
     image:
       "https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg",
   },
@@ -58,7 +64,6 @@ const courses = [
     image:
       "https://i.etsystatic.com/21944704/r/il/2a028b/3175957310/il_fullxfull.3175957310_3802.jpg",
   },
-  ,
   {
     name: "Typeface Design",
     author: "Gary Saltz",
@@ -107,7 +112,7 @@ const firstPage = () => {
             </p>
           </div>
           <div>
-            <Link href="/home">
+            <Link href="/signin">
               <button className="bg-blue-600 hover:bg-blue-500 text-white text-lg p-1 font-bold w-52 h-12 mt-10 tracking-wide rounded-xl">
                 GET STARTED
               </button>
