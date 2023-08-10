@@ -1,0 +1,9 @@
+.statistics {
+  color: gray;
+  font-size: 2rem;
+  margin-left: 60rem;
+}
+
+.statistics:hover{
+  color: rgb(3, 129, 255);
+}

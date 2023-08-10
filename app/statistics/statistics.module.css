@@ -1,0 +1,46 @@
+.main {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 0rem 10rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  grid-auto-flow: row;
+  background-color: rgb(245 245 245);
+
+}
+
+.last {
+  position: relative;
+  bottom: 18.5rem;
+  right: 0rem;
+  margin-right: 10rem;
+  width: 100%;
+}
+
+.myActivity {
+  position: relative;
+  height: fit-content;
+}
+
+@media (max-width: 1150px) {
+  .main {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 0rem 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .last {
+    bottom: 0rem;
+    margin-top: 2rem;
+  }
+
+  .myActivity {
+    margin-top: 0rem;
+  }
+}
