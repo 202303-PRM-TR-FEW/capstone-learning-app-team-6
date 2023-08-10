@@ -7,7 +7,7 @@ const RatingLevel = (props) => {
   return (
     <section className={styles.ratingLevelContainer}>
       <Rating />
-      <Level />
+      <Level levelsCheckedArray={props.levelsCheckedArray} />
     </section>
   );
 };

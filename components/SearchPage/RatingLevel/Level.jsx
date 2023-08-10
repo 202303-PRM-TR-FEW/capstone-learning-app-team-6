@@ -8,19 +8,32 @@ let category = [
   { id: "professional", name: "Professional" },
 ];
 const Level = (props) => {
-  const [categoriesChecked, setCategoriesChecked] = useState([]);
+  const [levelsChecked, setLevelsChecked] = useState([]);
 
   // Function to handle checkbox change
   const handleCheckboxChange = (event, categoryId) => {
     const isChecked = event.target.checked;
-    if (isChecked) {
-      setCategoriesChecked([...categoriesChecked, categoryId]);
-      console.log(categoriesChecked);
-    } else {
-      setCategoriesChecked(categoriesChecked.filter((id) => id !== categoryId));
-      console.log(categoriesChecked);
-    }
+    setLevelsChecked((prevCheckedCategories) => {
+      const updatedCategories = isChecked
+        ? [...prevCheckedCategories, categoryId]
+        : prevCheckedCategories.filter((id) => id !== categoryId);
+
+      // console.log(updatedCategories);
+      props.levelsCheckedArray(updatedCategories);
+      return updatedCategories;
+    });
   };
+  // const handleCheckboxChange = (event, categoryId) => {
+  //   const isChecked = event.target.checked;
+  //   if (isChecked) {
+  //     setLevelsChecked([...levelsChecked, categoryId]);
+  //     // console.log(levelsChecked);
+  //     props.levelsCheckedArray(levelsChecked)
+  //   } else {
+  //     setLevelsChecked(levelsChecked.filter((id) => id !== categoryId));
+  //     // console.log(levelsChecked);
+  //   }
+  // };
 
   return (
     <section>
@@ -32,7 +45,7 @@ const Level = (props) => {
               type="checkbox"
               className={styles.checkbox}
               id={category.id}
-              checked={categoriesChecked.includes(category.id)}
+              checked={levelsChecked.includes(category.id)}
               onChange={(event) => handleCheckboxChange(event, category.id)}
             />
             <label htmlFor={category.id}>{category.name}</label>
@@ -44,33 +57,3 @@ const Level = (props) => {
 };
 
 export default Level;
-
-// "use client";
-// import { useState } from "react";
-
-// import styles from "./styles/level.module.css";
-// let category = [
-//   { name: "Beginner" },
-//   { name: "Intermediate" },
-//   { name: "Professional" },
-// ];
-// const Level = (props) => {
-//   let categoriesChecked = [];
-//   const [level, setLevel] = useState("");
-
-//   return (
-//     <section>
-//       <h2 className={styles.header}>LEVEL</h2>
-//       <ul>
-//         {category.map((category) => (
-//           <li className={styles.category}>
-//             <input type="checkbox" className={styles.checkbox} />
-//             {category.name}
-//           </li>
-//         ))}
-//       </ul>
-//     </section>
-//   );
-// };
-
-// export default Level;

@@ -23,7 +23,7 @@ const Recommended = (props) => {
         onClick={reviewBtnHandler}
       >
         {/* the loop start */}
-        {props.filteredCourses.map((course) => (
+        {props.filteredCoursesProp  .map((course) => (
           <div
             className="cursor-pointer hover:outline hover:outline-2 hover:outline-blue-600 mt-5 rounded-2xl"
             key={course.id}
