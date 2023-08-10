@@ -1,14 +1,6 @@
-"use client";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const Navbar = () => {
-  const pathname = usePathname();
-
-  if (pathname === "/" || pathname === "/signin") {
-    return null;
-  }
-
   return (
     <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10 pt-12">
       <Link href="/">

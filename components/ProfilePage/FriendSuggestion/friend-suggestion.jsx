@@ -1,3 +1,4 @@
+
 import Styles from "./styles/friend-suggestion.module.css";
 let friendSuggestions = [
   { name: "Laura Evans", img: "https://i.pravatar.cc/400?img=1" },

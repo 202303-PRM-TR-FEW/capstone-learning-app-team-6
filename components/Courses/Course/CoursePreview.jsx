@@ -1,34 +1,32 @@
 "use client";
-import { useState } from "react";
 import { courses } from "@/app/page";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+// import Link from "next/link";
 
 import styles from "./styles/coursePreview.module.css";
 
 const CoursePreview = (props) => {
+  const router = useRouter();
   const reviewBtnHandler = () => {
-    if (typeof props.getClickedCourseName === "function") {
-      // Proceed with calling the function
-      courses.some((course) => {
-        if (course.name.trim() == props.displayedCourse.name.trim()) {
-          console.log(course.name);
-          props.getClickedCourseName(course);
-        }
-      });
+    // if (typeof props.getClickedCourseName === "function") {
+    const course = courses.find(
+      (course) => course.id === props.displayedCourse.id
+    );
+    if (course) {
+      // Navigate to the dynamic course page with the course Name
+      const coursePageUrl = `/courses/${course.id}`;
+      console.log(coursePageUrl);
+      router.push(coursePageUrl);
     } else {
       console.log(typeof props.getClickedCourseName);
     }
   };
-
+  const coursePageUrl = `/courses/${props.displayedCourse.id}`;
   return (
     <section className={`${styles["course-preview__container"]} mflex`}>
       <div className={`${styles.container} mflex`}>
         <div className={styles["media-container"]}>
-          <img
-            // src="https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg"
-            src={props.displayedCourse.image}
-            alt="Course Photo"
-          />
+          <img src={props.displayedCourse.image} alt="Course Photo" />
         </div>
         <div className={styles["course-content__container"]}>
           <h2 className={styles.text}>{props.displayedCourse.name}</h2>
@@ -87,8 +85,7 @@ const CoursePreview = (props) => {
         <div className={`${styles["actions-container"]} mflex`}>
           {/* <Link
             className={`${styles["action-button"]} ${styles["action-button__review"]}`}
-            // onClick={reviewBtnHandler}
-            href="/courses/coursepreviews"
+            href={`/courses/${props.displayedCourse.id}`}
           >
             {props.reviewBtn}
           </Link> */}
