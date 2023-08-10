@@ -27,7 +27,7 @@ function CategoriesSearchPage(props) {
         : prevCheckedCategories.filter((name) => name !== categoryName);
 
       console.log(updatedCategories);
-      props.categoriesCheckedArray(updatedCategories);
+      props.categoriesCheckedArray(updatedCategories, "category");
       return updatedCategories;
     });
   };

@@ -19,7 +19,7 @@ const Level = (props) => {
         : prevCheckedCategories.filter((id) => id !== categoryId);
 
       // console.log(updatedCategories);
-      props.levelsCheckedArray(updatedCategories);
+      props.levelsCheckedArray(updatedCategories, "level");
       return updatedCategories;
     });
   };

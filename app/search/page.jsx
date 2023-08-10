@@ -19,6 +19,8 @@ const Search = (props) => {
     setFilter(searchInput);
   };
 
+  /* 
+  LEVEL HANDLER
   const handleLevelsCheckedArray = (categoriesCheckedArray) => {
     courses.forEach((course) => {
       if (categoriesCheckedArray.includes(course.level.toLowerCase())) {
@@ -28,21 +30,35 @@ const Search = (props) => {
     console.log(matchingCoursesIds);
     // Update the checkedArray with the matching courses' IDs
     checkedArray =
-      ([...checkedArray],
+    ([...checkedArray],
       courses.filter((course) => matchingCoursesIds.includes(course.id)));
-    console.log(checkedArray);
-    setFilteredCourses([...checkedArray]);
-    console.log(filteredCourses);
+      console.log(checkedArray);
+      setFilteredCourses([...checkedArray]);
+      console.log(filteredCourses);
+    };
+    */
+  /* 
+  RATING HANDLER
+  */
+  const handleRating = (rateValue) => {
+    console.log(rateValue);
+    const filteredRateCourses = courses.filter(
+      (course) => course.rate <= rateValue
+    );
+    console.log(filteredRateCourses);
+    setFilteredCourses(filteredRateCourses);
   };
-  const handleCategoriesCheckedArray = (categoriesCheckedArray) => {
+
+  /* 
+  CHECKED ARRAY HANDLER
+  */
+  const handleCheckedArray = (categoriesCheckedArray, targetKey) => {
     courses.forEach((course) => {
-      if (categoriesCheckedArray.includes(course.category.toLowerCase())) {
+      if (categoriesCheckedArray.includes(course[targetKey].toLowerCase())) {
         matchingCoursesIds.push(course.id);
       }
     });
     console.log(matchingCoursesIds);
-    // Update the checkedArray with the matching courses' IDs
-    // checkedArray = courses.filter((course) =>
     checkedArray =
       ([...checkedArray],
       courses.filter((course) => matchingCoursesIds.includes(course.id)));
@@ -63,11 +79,12 @@ const Search = (props) => {
   return (
     <main className="home-container">
       <SearchBar onChange={handleInputChange} />
-      <TopSearches />
-      <CategoriesSearchPage
-        categoriesCheckedArray={handleCategoriesCheckedArray}
+      <TopSearches onClick={handleInputChange} />
+      <CategoriesSearchPage categoriesCheckedArray={handleCheckedArray} />
+      <RatingLevel
+        levelsCheckedArray={handleCheckedArray}
+        rateValueProp={handleRating}
       />
-      <RatingLevel levelsCheckedArray={handleLevelsCheckedArray} />
       <Recommended filteredCoursesProp={filteredCourses} />
     </main>
   );

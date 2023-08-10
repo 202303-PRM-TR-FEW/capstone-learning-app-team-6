@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import DisplayCourses from "./DisplayCourses";
 import styles from "./styles/featuredCourses.module.css";
-import { fetchCourses } from "@/Components/Fetching/fetching";
+import { fetchCourses } from "@/components/Fetching/fetching";
 
 const FeaturedCourses = () => {
   const [courses, setCourses] = useState([]);

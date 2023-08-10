@@ -6,7 +6,7 @@ import styles from "./styles/ratingLevel.module.css";
 const RatingLevel = (props) => {
   return (
     <section className={styles.ratingLevelContainer}>
-      <Rating />
+      <Rating rateValueProp={props.rateValueProp} />
       <Level levelsCheckedArray={props.levelsCheckedArray} />
     </section>
   );

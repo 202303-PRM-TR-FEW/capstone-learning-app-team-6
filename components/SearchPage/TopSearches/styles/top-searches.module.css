@@ -31,3 +31,8 @@
   background-color: rgb(232 239 246);
   color: rgb(46 141 255);
 }
+.active {
+  border: 2px solid rgb(46 141 255);
+  background-color: rgb(232 239 246);
+  color: rgb(46 141 255);
+}
