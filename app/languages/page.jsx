@@ -1,0 +1,1 @@
+// initial functionality for languages
