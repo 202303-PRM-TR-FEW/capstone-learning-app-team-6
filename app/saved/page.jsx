@@ -8,7 +8,7 @@ import styles from "../courses/coursePage.module.css";
 import {
   fetchSavedCourses,
   fetchedCourses,
-} from "@/Components/Fetching/fetching";
+} from "@/components/Fetching/fetching";
 
 const SavedCourses = (props) => {
   const [displayCourse, setDisplayCourse] = useState(courses[1]);
