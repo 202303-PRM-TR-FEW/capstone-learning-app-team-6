@@ -1,6 +1,6 @@
-import DisplayMyLearning from "@/Components/HomePage/MyLearning/DisplayMyLearning";
+import DisplayMyLearning from "@/components/HomePage/MyLearning/DisplayMyLearning";
 import { courses } from "@/app/page";
-import { fetchedCourses } from "@/Components/Fetching/fetching";
+import { fetchedCourses } from "@/components/Fetching/fetching";
 import Button from "@/components/UI/Button";
 
 const MyLearningCourses = (props) => {
