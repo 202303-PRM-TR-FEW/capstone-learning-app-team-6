@@ -14,9 +14,17 @@ const topSearches = [
 function TopSearches(props) {
   const [activeSearch, setActiveSearch] = useState(null);
   const handleInputChange = (searchValue) => {
-    setActiveSearch(searchValue);
+    // Toggle active search value
+    activeSearch === searchValue
+      ? setActiveSearch(null)
+      : setActiveSearch(searchValue);
+
     props.onClick(searchValue);
   };
+  // const handleInputChange = (searchValue) => {
+  //   setActiveSearch(searchValue);
+  //   props.onClick(searchValue);
+  // };
   return (
     <section className={styles.section}>
       <h2 className={styles.header}>TOP SEARCHES</h2>

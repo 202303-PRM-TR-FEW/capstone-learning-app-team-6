@@ -16,14 +16,13 @@ const Recommended = (props) => {
   };
 
   return (
-    <div className="max-w-full  h-1/2 pt-10 p-x-5">
+    <section className="max-w-full  h-1/2 pt-10 p-x-5">
       <h3 className="text-slate-800 text-xl font-bold">RECOMMENDED FOR YOU</h3>
       <div
         className="flex flex-row flex-wrap gap-6 p-3 ml-2"
         onClick={reviewBtnHandler}
       >
-        {/* the loop start */}
-        {props.filteredCoursesProp  .map((course) => (
+        {props.filteredCoursesProp.map((course) => (
           <div
             className="cursor-pointer hover:outline hover:outline-2 hover:outline-blue-600 mt-5 rounded-2xl"
             key={course.id}
@@ -41,9 +40,8 @@ const Recommended = (props) => {
             <p className="text-gray-500 text-sm pl-2">{course.author}</p>
           </div>
         ))}
-        {/* the loop ends */}
       </div>
-    </div>
+    </section>
   );
 };
 

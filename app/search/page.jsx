@@ -8,9 +8,11 @@ import Recommended from "@/Components/SearchPage/RecommendedForYou/Recommended";
 import { useState, useEffect } from "react";
 import { courses } from "@/app/page";
 
-const Search = (props) => {
+const Search = () => {
   let checkedArray = [];
   let matchingCoursesIds = [];
+  let displayedCourses = [];
+
   const [filter, setFilter] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
 
@@ -19,27 +21,9 @@ const Search = (props) => {
     setFilter(searchInput);
   };
 
-  /* 
-  LEVEL HANDLER
-  const handleLevelsCheckedArray = (categoriesCheckedArray) => {
-    courses.forEach((course) => {
-      if (categoriesCheckedArray.includes(course.level.toLowerCase())) {
-        matchingCoursesIds.push(course.id);
-      }
-    });
-    console.log(matchingCoursesIds);
-    // Update the checkedArray with the matching courses' IDs
-    checkedArray =
-    ([...checkedArray],
-      courses.filter((course) => matchingCoursesIds.includes(course.id)));
-      console.log(checkedArray);
-      setFilteredCourses([...checkedArray]);
-      console.log(filteredCourses);
-    };
-    */
-  /* 
+  /*
   RATING HANDLER
-  */
+*/
   const handleRating = (rateValue) => {
     console.log(rateValue);
     const filteredRateCourses = courses.filter(
@@ -53,7 +37,9 @@ const Search = (props) => {
   CHECKED ARRAY HANDLER
   */
   const handleCheckedArray = (categoriesCheckedArray, targetKey) => {
-    courses.forEach((course) => {
+    const arrayToBeUsed =
+      displayedCourses.length === 0 ? courses : displayedCourses;
+    arrayToBeUsed.forEach((course) => {
       if (categoriesCheckedArray.includes(course[targetKey].toLowerCase())) {
         matchingCoursesIds.push(course.id);
       }
@@ -61,7 +47,7 @@ const Search = (props) => {
     console.log(matchingCoursesIds);
     checkedArray =
       ([...checkedArray],
-      courses.filter((course) => matchingCoursesIds.includes(course.id)));
+      arrayToBeUsed.filter((course) => matchingCoursesIds.includes(course.id)));
     console.log(checkedArray);
     setFilteredCourses([...checkedArray]);
     console.log(filteredCourses);
