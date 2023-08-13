@@ -30,6 +30,9 @@ const LoginPage = () => {
         router.push("/home");
       })
       .catch((error) => {
+        setError(
+          "Incorrect email or password! Please type valid email and password with at least 6 characters."
+        );
         console.error(error);
       });
   };
@@ -115,7 +118,7 @@ const LoginPage = () => {
           />
           <span
             onClick={() => setPasswordVisible(!passwordVisible)}
-            className={`${styles["toggle-password-visibility"]} cursor-pointer `}
+            className={`${styles["toggle-password-visibility"]} cursor-pointer`}
           >
             {passwordVisible ? (
               <AiOutlineEyeInvisible size={18} />

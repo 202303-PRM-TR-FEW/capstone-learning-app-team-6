@@ -2,9 +2,13 @@
 import styles from "./styles/featuredCourseElement.module.css";
 import { styled } from "styled-components";
 import { useState, useEffect } from "react";
+// import {
+//   checkIfBookmarked,
+//   bookmarkCourse,
+// } from "@/components/Fetching/fetching";
 import {
   checkIfBookmarked,
-  bookmarkCourse,
+  addCourseToSaved,
 } from "@/components/Fetching/fetching";
 
 const PriceBox = styled.span`
@@ -56,13 +60,7 @@ const FeaturedCourseElement = (props) => {
         alert("This course has already been added!");
         return;
       }
-      await bookmarkCourse({
-        name: props.name,
-        image: props.image,
-        duration: props.duration,
-        rate: props.rate,
-        price: props.price,
-      });
+      addCourseToSaved(props.id);
       setIsBookmarked(true);
     } catch (error) {
       console.error("Error bookmarking course: ", error);
