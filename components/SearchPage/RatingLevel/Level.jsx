@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import SearchContext from "@/store/search-context";
 
 import styles from "./styles/level.module.css";
+import { courses } from "@/app/page";
 let category = [
   { id: "beginner", name: "Beginner" },
   { id: "intermediate", name: "Intermediate" },
@@ -9,6 +11,7 @@ let category = [
 ];
 const Level = (props) => {
   const [levelsChecked, setLevelsChecked] = useState([]);
+  const searchCtx = useContext(SearchContext);
 
   // Function to handle checkbox change
   const handleCheckboxChange = (event, categoryId) => {
@@ -18,22 +21,24 @@ const Level = (props) => {
         ? [...prevCheckedCategories, categoryId]
         : prevCheckedCategories.filter((id) => id !== categoryId);
 
-      // console.log(updatedCategories);
+      console.log("updatedCategories");
+      console.log(updatedCategories);
+
+      console.log("searchCtx");
+      console.log(searchCtx.filteredCoursesIds);
       props.levelsCheckedArray(updatedCategories, "level");
+      // courses.forEach((course) => {
+      //   if (levelsChecked.includes(course.level.toLowerCase())) {
+      //     searchCtx.filteredCoursesIds.push(course.id);
+      //   }
+      // });
+      // searchCtx.setFilteredCoursesIds(updatedCategories);
+
+      // console.log("searchCtx");
+      // console.log(searchCtx);
       return updatedCategories;
     });
   };
-  // const handleCheckboxChange = (event, categoryId) => {
-  //   const isChecked = event.target.checked;
-  //   if (isChecked) {
-  //     setLevelsChecked([...levelsChecked, categoryId]);
-  //     // console.log(levelsChecked);
-  //     props.levelsCheckedArray(levelsChecked)
-  //   } else {
-  //     setLevelsChecked(levelsChecked.filter((id) => id !== categoryId));
-  //     // console.log(levelsChecked);
-  //   }
-  // };
 
   return (
     <section>

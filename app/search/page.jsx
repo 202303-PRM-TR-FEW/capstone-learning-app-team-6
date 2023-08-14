@@ -5,6 +5,8 @@ import SearchBar from "@/Components/SearchPage/FindYourFav/SearchBar";
 import RatingLevel from "@/Components/SearchPage/RatingLevel/RatingLevel";
 import Recommended from "@/Components/SearchPage/RecommendedForYou/Recommended";
 
+import SearchContext from "@/store/search-context";
+
 import { useState, useEffect } from "react";
 import { courses } from "@/app/page";
 
@@ -15,6 +17,7 @@ const Search = () => {
 
   const [filter, setFilter] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
+  const [filteredCoursesIds, setFilteredCoursesIds] = useState([]);
 
   // Update filter state when searchInput changes
   const handleInputChange = (searchInput) => {
@@ -31,6 +34,7 @@ const Search = () => {
     );
     console.log(filteredRateCourses);
     setFilteredCourses(filteredRateCourses);
+    // setFilteredCoursesIds((prev) => [...prev, course.id]);
   };
 
   /* 
@@ -42,15 +46,17 @@ const Search = () => {
     arrayToBeUsed.forEach((course) => {
       if (categoriesCheckedArray.includes(course[targetKey].toLowerCase())) {
         matchingCoursesIds.push(course.id);
+        setFilteredCoursesIds((prev) => [...prev, course.id]);
       }
     });
-    console.log(matchingCoursesIds);
+    console.log(filteredCoursesIds);
+    // console.log(matchingCoursesIds);
     checkedArray =
       ([...checkedArray],
       arrayToBeUsed.filter((course) => matchingCoursesIds.includes(course.id)));
-    console.log(checkedArray);
+    // console.log(checkedArray);
     setFilteredCourses([...checkedArray]);
-    console.log(filteredCourses);
+    // console.log(filteredCourses);
   };
   useEffect(() => {
     const filteredCourses = courses.filter(
@@ -64,14 +70,18 @@ const Search = () => {
 
   return (
     <main className="home-container">
-      <SearchBar onChange={handleInputChange} />
-      <TopSearches onClick={handleInputChange} />
-      <CategoriesSearchPage categoriesCheckedArray={handleCheckedArray} />
-      <RatingLevel
-        levelsCheckedArray={handleCheckedArray}
-        rateValueProp={handleRating}
-      />
-      <Recommended filteredCoursesProp={filteredCourses} />
+      <SearchContext.Provider
+        value={{ filteredCoursesIds: [filteredCoursesIds] }}
+      >
+        <SearchBar onChange={handleInputChange} />
+        <TopSearches onClick={handleInputChange} />
+        <CategoriesSearchPage categoriesCheckedArray={handleCheckedArray} />
+        <RatingLevel
+          levelsCheckedArray={handleCheckedArray}
+          rateValueProp={handleRating}
+        />
+        <Recommended filteredCoursesProp={filteredCourses} />
+      </SearchContext.Provider>
     </main>
   );
 };
