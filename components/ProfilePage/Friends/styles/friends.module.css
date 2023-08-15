@@ -1,4 +1,3 @@
-
 .container {
   display: flex;
   /* border: 1px solid red; */
@@ -22,6 +21,7 @@
   margin-left: 1rem;
   width: 55rem;
   height: 20rem;
+  border-radius: 2rem;
 }
 
 .friendsContainer {
@@ -45,30 +45,27 @@
 }
 
 .viewAllFriends {
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   font-size: 2rem;
   font-weight: 700;
   text-align: start;
   color: rgb(46 141 255);
   height: 6rem;
-  /* border: 1px solid rgb(0, 255, 106); */
   margin-top: 17rem;
   background-color: white;
   width: 55rem;
-}
-
-.viewAllFriends:hover {
-  scale: 1.02;
+  margin-left: -0.2rem;
+  cursor: pointer;
 }
 
 .friendName {
- /*  border: solid; */
+  /*  border: solid; */
   width: 20rem;
   text-align: left;
   padding-left: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .friendImg {
@@ -81,7 +78,7 @@
 .horizontalLine {
   position: absolute;
   top: 8.5rem;
-  width: 100%;
+  width: 51rem;
   margin-left: 1rem;
   margin-right: auto;
 }
@@ -89,9 +86,10 @@
 .profile {
   color: rgb(46 141 255);
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   font-size: 1.5rem;
   margin-left: 15rem;
+  cursor: pointer;
 }
 /* 
 @media (max-width: 1000px) {

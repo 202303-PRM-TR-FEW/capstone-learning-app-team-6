@@ -277,7 +277,7 @@ const firstPage = () => {
         </div>
       </div>
 
-      <div className="flex bg-white rounded-l-[70px] items-center justify-center h-screen w-1/2">
+      <div className="flex bg-white rounded-l-[70px] ml-auto items-center justify-center h-screen md:w-1/2 w-2/5">
         <Image
           className=""
           src="https://assets.api.uizard.io/api/cdn/stream/a8ce660d-47da-404a-b3b3-63ca6970ddcf.png"

@@ -4,11 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
-  const pathname = usePathname();
-
-  if (pathname === "/" || pathname === "/signin") {
-    return null;
-  }
   const classes = {
     home: true,
     search: false,
@@ -17,9 +12,13 @@ const Navbar = () => {
     profile: false,
   };
   const [changeClass, setChangeClass] = useState(classes);
+  const pathname = usePathname();
+  if (pathname === "/" || pathname === "/signin") {
+    return null;
+  }
 
   return (
-    <nav className=" flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10 pt-12">
+    <nav className=" flex flex-col rounded w-20 h-screen text-center gap-10 pl-10 pt-12">
       <Link href="/">
         <div>
           <div className="text-blue-500 hover:text-blue-400 cursor-pointer">
@@ -51,7 +50,7 @@ const Navbar = () => {
             }
             className={
               changeClass.home
-                ? "text-gray-400 hover:text-blue-400 cursor-pointer text-blue-400"
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
                 : "text-gray-400 hover:text-blue-400 cursor-pointer "
             }
           >
@@ -81,7 +80,7 @@ const Navbar = () => {
             }
             className={
               changeClass.search
-                ? "text-gray-400 hover:text-blue-400 cursor-pointer text-blue-400"
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
                 : "text-gray-400 hover:text-blue-400 cursor-pointer"
             }
           >
@@ -114,7 +113,7 @@ const Navbar = () => {
             }
             className={
               changeClass.course
-                ? "text-gray-400 hover:text-blue-400 cursor-pointer text-blue-400"
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
                 : "text-gray-400 hover:text-blue-400 cursor-pointer"
             }
           >
@@ -147,7 +146,7 @@ const Navbar = () => {
             }
             className={
               changeClass.saved
-                ? "text-gray-400 hover:text-blue-400 cursor-pointer text-blue-400"
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
                 : "text-gray-400 hover:text-blue-400 cursor-pointer"
             }
           >
@@ -180,7 +179,7 @@ const Navbar = () => {
             }
             className={
               changeClass.profile
-                ? "text-gray-400 hover:text-blue-400 cursor-pointer mb-4 text-blue-400"
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer mb-4"
                 : "text-gray-400 hover:text-blue-400 cursor-pointer mb-4"
             }
           >

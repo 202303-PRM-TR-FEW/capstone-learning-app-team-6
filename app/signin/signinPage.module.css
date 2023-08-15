@@ -13,13 +13,13 @@
   border-radius: 10px;
 }
 
-.input-field {
+/* .input-field {
   padding: 10px;
   margin-bottom: 20px;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
+} */
 
 .button {
   padding: 10px;
@@ -63,14 +63,38 @@
   background-color: #357abd;
 }
 
-.password-container {
+.passwordContainer {
   position: relative;
   width: 100%;
+  padding-right: 5rem;
+  outline-width: 2px;
+  outline-color: #778899;
 }
 
-.toggle-password-visibility {
+/* .inputField {
+  width: 100%;
+  box-sizing: border-box;
+  outline-width: 2px;
+  outline-color: #60a5fa;
+} */
+
+.inputField {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #94a3b8;
+  border-radius: 5px;
+  outline-width: 2px;
+  outline-color: #60a5fa;
+}
+
+/* .inputField:focus {
+  border-color: #60a5fa;
+} */
+
+.togglePasswordVisibility {
   position: absolute;
-  right: 0.6rem;
-  top: 1rem;
-  cursor: pointer;
+  top: 43%;
+  right: 3.3rem;
+  transform: translateY(-90%);
+  z-index: 0;
 }

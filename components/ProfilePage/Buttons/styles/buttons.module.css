@@ -1,8 +1,8 @@
-
 .buttons {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+  margin-left: -4rem;
 }
 
 .findFriends {
@@ -38,6 +38,21 @@
 .inviteFriends:hover {
   scale: 1.02;
 }
+
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .findFriends,
+  .inviteFriends {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 35rem;
+    margin-bottom: 1rem;
+  }
+}
 /* 
 @media (max-width: 1000px) {
   .buttons {
@@ -57,4 +72,3 @@
     margin-left: 0rem;
   }
 } */
-

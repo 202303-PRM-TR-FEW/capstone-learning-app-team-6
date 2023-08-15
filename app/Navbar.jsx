@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10 pt-12">
+    <nav className="flex flex-col rounded w-20 h-screen text-center gap-10 pl-10 pt-12">
       <Link href="/">
         <div>
           <div className="text-blue-500 hover:text-blue-400 cursor-pointer">
