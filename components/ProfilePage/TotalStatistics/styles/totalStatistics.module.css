@@ -1,3 +1,4 @@
+
 .header-text {
   font-size: 2rem;
   font-weight: 600;
@@ -6,20 +7,20 @@
 }
 
 .features-container {
-  max-width: 50%;
+  width: 55rem;
   margin-bottom: 1rem;
-  padding-left: 6rem;
-  margin-top: 12rem;
-  /* border: 1px solid red; */
+  margin-left: 3rem;
+  padding-left: 2rem;
+  margin-top:2rem;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
 }
 
+/* 
 @media (max-width: 950px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -36,4 +37,4 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
   }
-}
+} */

@@ -9,8 +9,11 @@ const CourseContent = (props) => {
   return (
     <section className={`${styles["content__container"]} flex`}>
       <ul className={styles["container"]}>
-      <h2 className="header-text">Course Overview</h2>
-        <DisplayChapterElements course={courses[0].content} />
+        <h2 className="header-text">Course Overview</h2>
+        <DisplayChapterElements
+          key={props.displayedCourseContent.name}
+          course={props.displayedCourseContent}
+        />
       </ul>
       <ActionButton action={"BUY NOW"} />
     </section>

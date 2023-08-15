@@ -1,33 +1,65 @@
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@fortawesome/fontawesome-free/js/all.js";
+import { useState } from "react";
 import styles from "./styles/top-searches.module.css";
 
-let topSearches = [
-  { name: "Marketing Strategy" },
+const topSearches = [
+  { name: "Master" },
   { name: "UX Design" },
   { name: "Excel" },
-  { name: "Adobe Photoshop" },
-  { name: "CRM" },
+  { name: "Product" },
+  { name: "Discover" },
   { name: "Photography" },
-  { name: "Content Making" },
+  { name: "Advanced" },
 ];
 
-function TopSearches() {
+function TopSearches(props) {
+  const [activeSearch, setActiveSearch] = useState(null);
+  const handleInputChange = (searchValue) => {
+    // Toggle active search value
+    activeSearch === searchValue
+      ? setActiveSearch(null)
+      : setActiveSearch(searchValue);
+
+    props.onClick(searchValue);
+  };
+  // const handleInputChange = (searchValue) => {
+  //   setActiveSearch(searchValue);
+  //   props.onClick(searchValue);
+  // };
   return (
     <section className={styles.section}>
-      <h2 className={styles["header"]}>TOP SEARCHES</h2>
+      <h2 className={styles.header}>TOP SEARCHES</h2>
       <ul className={styles.parent}>
-        {topSearches.map((topSearches) => (
+        {topSearches.map((searchItem) => (
           <li
-            key={topSearches.name}
-            className={`${topSearches.icon} ${styles.li} `}
+            key={searchItem.name}
+            className={`${styles.li} ${
+              activeSearch === searchItem.name ? styles.active : ""
+            }`}
+            onClick={() => handleInputChange(searchItem.name)}
           >
-            <p className={styles.text}>{topSearches.name}</p>
+            <p className={styles.text}>{searchItem.name}</p>
           </li>
         ))}
       </ul>
     </section>
   );
+
+  // return (
+  //   <section className={styles.section}>
+  //     <h2 className={styles.header}>TOP SEARCHES</h2>
+  //     <ul className={styles.parent}>
+  //       {topSearches.map((searchItem) => (
+  //         <li
+  //           key={searchItem.name}
+  //           className={`${styles.li}`}
+  //           onClick={() => handleInputChange(searchItem.name)  className={`${styles.active}`.toggle}}
+  //         >
+  //           <p className={styles.text}>{searchItem.name}</p>
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </section>
+  // );
 }
 
 export default TopSearches;

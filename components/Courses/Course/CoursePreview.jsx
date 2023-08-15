@@ -1,18 +1,36 @@
-import ActionButton from "@/components/UI/ActionButton";
+"use client";
+import { courses } from "@/app/page";
+import { useRouter } from "next/navigation";
+// import Link from "next/link";
+
 import styles from "./styles/coursePreview.module.css";
 
 const CoursePreview = (props) => {
+  const router = useRouter();
+  const reviewBtnHandler = () => {
+    // if (typeof props.getClickedCourseName === "function") {
+    const course = props.coursesSource.find(
+      (course) => course.id === props.displayedCourse.id
+      // (course) => course.name === props.displayedCourse.name
+    );
+    if (course) {
+      // Navigate to the dynamic course page with the course Name
+      const coursePageUrl = `/courses/${course.id}`;
+      console.log(coursePageUrl);
+      router.push(coursePageUrl);
+    } else {
+      console.log(typeof props.getClickedCourseName);
+    }
+  };
+  // const coursePageUrl = `/courses/${props.displayedCourse.id}`;
   return (
     <section className={`${styles["course-preview__container"]} mflex`}>
       <div className={`${styles.container} mflex`}>
         <div className={styles["media-container"]}>
-          <img
-            src="https://www.nyip.edu/media/zoo/images/3-ways-to-become-a-better-photographer-1_19a9ab40eb62ec202806518ffdb67b08.jpg"
-            alt="Course Photo"
-          />
+          <img src={props.displayedCourse.image} alt="Course Photo" />
         </div>
         <div className={styles["course-content__container"]}>
-          <h2 className={styles.text}>Becoming a Photographer</h2>
+          <h2 className={styles.text}>{props.displayedCourse.name}</h2>
           <div className={`${styles["course-info"]} mflex`}>
             <div className={`${styles["author-container"]} mflex`}>
               <div className={styles["author-image__container"]}>
@@ -21,7 +39,7 @@ const CoursePreview = (props) => {
                   alt="Author's Photo"
                 />
               </div>
-              <h3>Tom Collins</h3>
+              <h3>{props.displayedCourse.author}</h3>
             </div>
             <p className={`${styles["course-duration"]} mflex`}>
               <svg
@@ -36,7 +54,7 @@ const CoursePreview = (props) => {
                   clipRule="evenodd"
                 />
               </svg>
-              43min
+              {props.displayedCourse.duration}
             </p>
             <p className={`${styles["course-rate"]} mflex`}>
               <svg
@@ -51,7 +69,7 @@ const CoursePreview = (props) => {
                   clipRule="evenodd"
                 />
               </svg>
-              4.3/5.0
+              {props.displayedCourse.rate}/5
             </p>
           </div>
         </div>
@@ -66,12 +84,20 @@ const CoursePreview = (props) => {
       </div>
       {!props.actionButton && (
         <div className={`${styles["actions-container"]} mflex`}>
+          {/* <Link
+            className={`${styles["action-button"]} ${styles["action-button__review"]}`}
+            href={`/courses/${props.displayedCourse.id}`}
+          >
+            {props.reviewBtn}
+          </Link> */}
           <button
             className={`${styles["action-button"]} ${styles["action-button__review"]}`}
+            onClick={reviewBtnHandler}
           >
-            {props.review}
+            {props.reviewBtn}
           </button>
-          <button className={styles["action-button"]}>{props.action}</button>;
+          <button className={styles["action-button"]}>{props.actionBtn}</button>
+          ;
         </div>
       )}
     </section>

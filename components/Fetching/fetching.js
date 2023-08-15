@@ -1,5 +1,5 @@
-// import { getDocs, collection, addDoc, query, where } from "firebase/firestore";
-// import db from "@/firebase.js";
+import { getDocs, collection, addDoc, query, where } from "firebase/firestore";
+import db from "@/firebase.js";
 
 export const fetchCourses = async () => {
   const courseCollection = collection(db, "courses");

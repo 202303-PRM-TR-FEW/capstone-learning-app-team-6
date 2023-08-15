@@ -51,6 +51,11 @@ const FeaturedCourseElement = (props) => {
 
   const handleBookmark = async () => {
     try {
+      const alreadyBookmarked = await checkIfBookmarked(props.name);
+      if (alreadyBookmarked) {
+        alert("This course has already been added!");
+        return;
+      }
       await bookmarkCourse({
         name: props.name,
         image: props.image,
@@ -65,7 +70,7 @@ const FeaturedCourseElement = (props) => {
   };
 
   return (
-    <li key={props.key} className={`${styles["course-card"]} mflex`}>
+    <li key={props.id} className={`${styles["course-card"]} mflex`}>
       <div className={`${styles["course-image__container"]}`}>
         <img src={props.image} />
       </div>
