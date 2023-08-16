@@ -27,8 +27,21 @@ const SearchBar = (props) => {
         value={searchInput}
         onChange={handleInputChange}
       />
-      <Button onClick={handleSearchClick}>SEARCH</Button>
-      <button onClick={handleSearchClick}>SEARCH</button>
+      {/* <Button onClick={handleSearchClick}>SEARCH</Button> */}
+      <button
+  onClick={handleSearchClick}
+  style={{
+    backgroundColor: "#2e8dff",
+    color: "#fbfbfb",
+    fontSize: "1.6rem",
+    padding: "0.5rem 2rem",
+    borderRadius: "1.2rem",
+    fontWeight: 600
+  }}
+>
+  SEARCH
+</button>
+
     </section>
   );
 };

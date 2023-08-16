@@ -14,10 +14,11 @@ const Search = () => {
   let checkedArray = [];
   let matchingCoursesIds = [];
   let displayedCourses = [];
-
+  
   const [filter, setFilter] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [filteredCoursesIds, setFilteredCoursesIds] = useState([]);
+  let uniqueCoursesIds = [...new Set(filteredCoursesIds)];
 
   // Update filter state when searchInput changes
   const handleInputChange = (searchInput) => {
@@ -49,14 +50,18 @@ const Search = () => {
         setFilteredCoursesIds((prev) => [...prev, course.id]);
       }
     });
+    console.log("filteredCoursesIds");
     console.log(filteredCoursesIds);
+    console.log("uniqueCoursesIds");
+    console.log(uniqueCoursesIds);
     // console.log(matchingCoursesIds);
     checkedArray =
       ([...checkedArray],
       arrayToBeUsed.filter((course) => matchingCoursesIds.includes(course.id)));
-    // console.log(checkedArray);
+    // arrayToBeUsed.filter((course) =>
+    //   new Set(filteredCoursesIds).has(course.id)
+    // ));
     setFilteredCourses([...checkedArray]);
-    // console.log(filteredCourses);
   };
   useEffect(() => {
     const filteredCourses = courses.filter(

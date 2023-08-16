@@ -1,7 +1,11 @@
 import styles from "./styles/button.module.css";
 
-const Button = ({ children }) => {
-  return <button className={styles["course-price"]}>{children}</button>;
+const Button = (props, { children }) => {
+  return (
+    <button className={styles["course-price"]} onClick={props.onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

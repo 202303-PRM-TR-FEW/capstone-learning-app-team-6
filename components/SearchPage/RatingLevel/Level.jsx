@@ -21,8 +21,8 @@ const Level = (props) => {
         ? [...prevCheckedCategories, categoryId]
         : prevCheckedCategories.filter((id) => id !== categoryId);
 
-      console.log("updatedCategories");
-      console.log(updatedCategories);
+      // console.log("updatedCategories");
+      // console.log(updatedCategories);
 
       console.log("searchCtx");
       console.log(searchCtx.filteredCoursesIds);

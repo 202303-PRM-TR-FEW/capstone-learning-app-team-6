@@ -9,3 +9,9 @@
 .home-container__courses section ul li {
   width: 100%;
 }
+
+@media (max-width: 650px) {
+  .home-container__courses {
+    grid-template-columns: 1fr;
+  }
+}

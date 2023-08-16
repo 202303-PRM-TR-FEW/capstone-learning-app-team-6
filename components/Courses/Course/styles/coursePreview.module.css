@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 .author-container:hover {
-opacity: 0.7;
+  opacity: 0.7;
 }
 .author-image__container {
   width: 4rem;
@@ -118,4 +118,9 @@ opacity: 0.7;
   border-radius: 1rem;
   background-color: #2e8dff;
   color: #fbfbfb;
+}
+@media (max-width: 650px) {
+  .course-preview__container {
+    grid-row: 1;
+  }
 }
