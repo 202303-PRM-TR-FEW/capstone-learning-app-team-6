@@ -14,7 +14,7 @@ const Search = () => {
   let checkedArray = [];
   let matchingCoursesIds = [];
   let displayedCourses = [];
-  
+
   const [filter, setFilter] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [filteredCoursesIds, setFilteredCoursesIds] = useState([]);

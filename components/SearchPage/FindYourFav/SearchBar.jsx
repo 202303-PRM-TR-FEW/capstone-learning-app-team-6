@@ -1,7 +1,6 @@
 "use client";
-
 import { useState } from "react";
-import Button from "@/Components/UI/Button";
+import Button from "@/components/UI/Button";
 import styles from "./styles/searchBar.module.css";
 
 const SearchBar = (props) => {

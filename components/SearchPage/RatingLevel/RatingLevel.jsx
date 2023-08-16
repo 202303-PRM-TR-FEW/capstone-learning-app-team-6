@@ -1,6 +1,5 @@
 import Level from "@/components/SearchPage/RatingLevel/Level";
 import Rating from "@/components/SearchPage/RatingLevel/Rating";
-
 import styles from "./styles/ratingLevel.module.css";
 
 const RatingLevel = (props) => {

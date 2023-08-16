@@ -1,16 +1,30 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
 
 const Navbar = () => {
+  const classes = {
+    home: true,
+    search: false,
+    course: false,
+    saved: false,
+    profile: false,
+  };
+  const [changeClass, setChangeClass] = useState(classes);
   const pathname = usePathname();
-
-  if (pathname === "/" || pathname === "/signin") {
+  if (
+    pathname === "/" ||
+    pathname === "/signin" ||
+    pathname === "/statistics"
+  ) {
     return null;
   }
 
   return (
-    <nav className="flex flex-col rounded w-20 h-screen bg-slate-100 text-center gap-10 pl-10 pt-12">
+    <nav
+      className={`flex flex-col rounded w-20 h-screen text-center gap-10 pl-10 pt-12`}
+    >
       <Link href="/">
         <div>
           <div className="text-blue-500 hover:text-blue-400 cursor-pointer">
@@ -30,7 +44,22 @@ const Navbar = () => {
 
       <div className="flex flex-col gap-10">
         <Link href="/home">
-          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
+          <div
+            onClick={() =>
+              setChangeClass({
+                search: false,
+                course: false,
+                saved: false,
+                profile: false,
+                home: true,
+              })
+            }
+            className={
+              changeClass.home
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
+                : "text-gray-400 hover:text-blue-400 cursor-pointer "
+            }
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -45,7 +74,22 @@ const Navbar = () => {
         </Link>
 
         <Link href="/search">
-          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
+          <div
+            onClick={() =>
+              setChangeClass({
+                search: true,
+                course: false,
+                saved: false,
+                profile: false,
+                home: false,
+              })
+            }
+            className={
+              changeClass.search
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
+                : "text-gray-400 hover:text-blue-400 cursor-pointer"
+            }
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -63,7 +107,22 @@ const Navbar = () => {
         </Link>
 
         <Link href="/courses">
-          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
+          <div
+            onClick={() =>
+              setChangeClass({
+                search: false,
+                course: true,
+                saved: false,
+                profile: false,
+                home: false,
+              })
+            }
+            className={
+              changeClass.course
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
+                : "text-gray-400 hover:text-blue-400 cursor-pointer"
+            }
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -81,7 +140,22 @@ const Navbar = () => {
         </Link>
 
         <Link href="/saved">
-          <div className="text-gray-400 hover:text-blue-400 cursor-pointer">
+          <div
+            onClick={() =>
+              setChangeClass({
+                search: false,
+                course: false,
+                saved: true,
+                profile: false,
+                home: false,
+              })
+            }
+            className={
+              changeClass.saved
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer"
+                : "text-gray-400 hover:text-blue-400 cursor-pointer"
+            }
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -99,7 +173,22 @@ const Navbar = () => {
         </Link>
 
         <Link href="/profile">
-          <div className="text-gray-400 hover:text-blue-400 cursor-pointer mb-4">
+          <div
+            onClick={() =>
+              setChangeClass({
+                search: false,
+                course: false,
+                saved: false,
+                profile: true,
+                home: false,
+              })
+            }
+            className={
+              changeClass.profile
+                ? "text-gray-400 hover:text-blue-400 cursor-pointer mb-4"
+                : "text-gray-400 hover:text-blue-400 cursor-pointer mb-4"
+            }
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

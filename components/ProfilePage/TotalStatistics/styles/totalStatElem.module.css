@@ -23,7 +23,6 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: 0rem;
-
 }
 
 .course-image__container img {
@@ -36,7 +35,7 @@
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
-  padding: .4rem;
+  padding: 0.4rem;
 }
 
 .course-info {
@@ -45,7 +44,7 @@
   font-weight: 600;
   font-size: 2rem;
   text-align: center;
-  padding-bottom: .1rem;
+  padding-bottom: 0.1rem;
 }
 
 .course-quantity {
@@ -55,11 +54,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-/* 
-@media (max-width: 950px) {
-  .course-image__container {
-    height: 20rem;
-  }
-} */

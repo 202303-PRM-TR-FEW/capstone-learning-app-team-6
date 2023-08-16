@@ -22,24 +22,29 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
 .chapter__header {
   font-size: 2rem;
   font-weight: 500;
 }
+
 .number-of-videos {
   font-size: 1.5rem;
   font-weight: 500;
   color: #616161;
 }
+
 .chevron-right__icon {
   width: 3rem;
   height: auto;
   stroke: #949494;
   cursor: pointer;
 }
+
 .chevron-right__container {
   align-self: center;
 }
+
 .check__icon {
   width: 3rem;
   height: auto;

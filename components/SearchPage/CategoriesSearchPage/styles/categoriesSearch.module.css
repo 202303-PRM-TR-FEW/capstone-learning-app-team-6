@@ -14,14 +14,10 @@
 .category {
   text-align: center;
   display: inline-block;
-  /* padding-top: 10px; */
   font-size: 15px;
   border-radius: 20px;
   width: 140px;
-  /* height: 70px; */
   margin: 5px;
-  /* padding-top: 20px; */
-  /* padding-bottom: 30px; */
 }
 
 .checkbox {

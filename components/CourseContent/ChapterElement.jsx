@@ -36,4 +36,5 @@ const ChapterElement = (props) => {
     </article>
   );
 };
+
 export default ChapterElement;

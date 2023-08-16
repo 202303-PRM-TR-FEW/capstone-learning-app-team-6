@@ -10,9 +10,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-// import { AiOutlineEyeInvisible } from "react-icons/ai";
-// import { AiOutlineEye } from "react-icons/ai";
-
 import styles from "./signinPage.module.css";
 
 const LoginPage = () => {
@@ -30,6 +27,9 @@ const LoginPage = () => {
         router.push("/home");
       })
       .catch((error) => {
+        setError(
+          "Incorrect email or password! Please provide valid email and password with at least 6 characters"
+        );
         console.error(error);
       });
   };
@@ -62,7 +62,7 @@ const LoginPage = () => {
   return (
     <div className="flex bg-gray-300 w-screen h-screen">
       <div className="w-1/2 flex items-center justify-center h-screen p-2">
-        <div className="flex flex-col bg-white mx-auto w-3/6 h-54 rounded-xl">
+        <div className="flex flex-col bg-white md:mx-auto ml-9 md:w-1/2 w-6/7 h-54 rounded-xl">
           <div
             className="text-blue-500 mx-auto m-10 mb-5 hover:text-blue-400 cursor-pointer"
             onClick={navigateToHomePage}
@@ -101,37 +101,37 @@ const LoginPage = () => {
               }
             }}
           />
-          <input
-            className="h-20 outline outline-2 outline-slate-400 focus:outline-blue-400 text-2xl rounded p-1 pl-4 pr-10 m-10 mt-0"
-            type={passwordVisible ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-              if (!e.target.value && !email) {
-                setError(null);
-              }
-            }}
-          />
-          <span
-            onClick={() => setPasswordVisible(!passwordVisible)}
-            className={`${styles["toggle-password-visibility"]} cursor-pointer `}
-          >
-            {passwordVisible ? (
-              <AiOutlineEyeInvisible size={18} />
-            ) : (
-              <AiOutlineEye size={18} />
-            )}
-          </span>
+          <div className={styles.passwordContainer}>
+            <input
+              className={`h-20 text-2xl rounded p-1 pl-4 pr-10 m-10 mt-0 ${styles.inputField} `}
+              type={passwordVisible ? "text" : "password"}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                if (!e.target.value && !email) {
+                  setError(null);
+                }
+              }}
+            />
+            <span
+              onClick={() => setPasswordVisible(!passwordVisible)}
+              className={`${styles.togglePasswordVisibility} cursor-pointer`}
+            >
+              {passwordVisible ? (
+                <AiOutlineEyeInvisible size={18} />
+              ) : (
+                <AiOutlineEye size={18} />
+              )}
+            </span>
+          </div>
+
           <input
             className="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-2xl h-20 rounded-xl pl-4 m-10 mt-0"
             type="submit"
             onClick={handleLogin}
             value="Log In"
           />
-          {/* <p className="m-10 mb-5 mx-auto mt-0 hover:underline cursor-pointer text-blue-500 font-semibold text-xl ">
-            Forgot Password ?
-          </p> */}
           <hr className="bg-slate-400 mx-auto mt-0 w-1/2 h-1 rounded" />
           <input
             className="bg-green-600 hover:bg-green-500 text-white font-semibold text-2xl h-20 rounded-xl pl-4 m-10"
@@ -150,7 +150,7 @@ const LoginPage = () => {
         </div>
       </div>
 
-      <div className="flex bg-white rounded-l-[70px] items-center justify-center h-screen w-1/2">
+      <div className="flex bg-white rounded-l-[70px] ml-auto items-center justify-center h-screen md:w-1/2 w-2/5">
         <Image
           className=""
           src="https://assets.api.uizard.io/api/cdn/stream/a8ce660d-47da-404a-b3b3-63ca6970ddcf.png"

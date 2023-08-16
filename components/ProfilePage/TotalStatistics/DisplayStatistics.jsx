@@ -1,4 +1,3 @@
-
 import StatisticsElement from "./TotalStatElem";
 
 const DisplayStatistics = (props) => {
@@ -15,4 +14,3 @@ const DisplayStatistics = (props) => {
 };
 
 export default DisplayStatistics;
-

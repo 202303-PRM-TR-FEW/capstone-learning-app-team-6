@@ -14,7 +14,7 @@ const courses = [
     price: 24,
     image:
       "https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg",
-    rate: 4.6,
+    rate: 1.0,
     value: 11,
     content: [
       { name: "Introduction", videos: 1 },
@@ -225,6 +225,7 @@ const courses = [
     level: "Beginner",
     price: 16.99,
     rate: 3.2,
+    rate: 3.2,
     value: 10,
     image:
       "https://images.unsplash.com/photo-1547027072-332f09bd6bb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMDUzMDJ8MHwxfHNlYXJjaHw0Mnx8dXglMjBkZXNpZ258ZW58MXx8fHwxNjczMDE5MTc5&ixlib=rb-4.0.3&q=80&w=1080",
@@ -278,7 +279,7 @@ const firstPage = () => {
         </div>
       </div>
 
-      <div className="flex bg-white rounded-l-[70px] items-center justify-center h-screen w-1/2">
+      <div className="flex bg-white rounded-l-[70px] ml-auto items-center justify-center h-screen md:w-1/2 w-2/5">
         <Image
           className=""
           src="https://assets.api.uizard.io/api/cdn/stream/a8ce660d-47da-404a-b3b3-63ca6970ddcf.png"

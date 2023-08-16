@@ -3,7 +3,6 @@
   font-weight: 600;
   margin-bottom: 1rem;
   margin-left: 5rem;
-  /* border: 1px solid black; */
   width: 50vh;
   margin-top: 3rem;
 }
@@ -15,13 +14,4 @@
   align-items: start;
   width: 55rem;
   margin-left: 4rem;
-  /* border: 1px solid black; */
 }
-
-/* 
-@media (max-width: 800px) {
-  .cards-container {
-    flex-direction: column;
-  }
-}
- */

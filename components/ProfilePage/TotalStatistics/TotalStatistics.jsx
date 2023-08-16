@@ -1,4 +1,3 @@
-
 import DisplayStatistics from "./DisplayStatistics";
 import styles from "./styles/totalStatistics.module.css";
 

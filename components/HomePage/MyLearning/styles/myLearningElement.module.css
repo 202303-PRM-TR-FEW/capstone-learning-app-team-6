@@ -9,8 +9,8 @@
   justify-content: flex-start;
   margin-bottom: 2rem;
 }
+
 .myLearning-card:hover {
-  /* scale: 1.02; */
   border: 1px solid #2e8dff;
   background-color: #e8eff6;
 }
@@ -41,14 +41,17 @@
   width: 100%;
   justify-content: space-between;
 }
+
 .course h2 {
   font-size: 2rem;
   font-weight: 700;
 }
+
 .course svg {
   fill: #b1b1b1;
   /* padding: ; */
 }
+
 .author-name {
   font-size: 1.2rem;
   font-weight: 500;
@@ -58,6 +61,7 @@
 .progress-container {
   width: 100%;
 }
+
 .progress-bar {
   width: 100%;
   /* height: 10px; */
@@ -72,6 +76,7 @@
   background-color: #2e8dff; /* Change the color to blue */
   border-radius: 2rem;
 }
+
 .progress-container p {
   color: #686868;
   font-size: 1.2rem;

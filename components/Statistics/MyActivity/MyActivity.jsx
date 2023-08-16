@@ -1,14 +1,23 @@
 import "rsuite/dist/rsuite.min.css";
 import Styles from "./styles/MyActivity.module.css";
+
 function MyActivity() {
   return (
     <div className={Styles.container}>
       <h3 style={{ marginTop: "4rem", marginBottom: "2rem" }}>My Activity</h3>
-      <div style={{ border: "1px solid rgb(209, 209, 209)" , borderRadius:"2rem",backgroundColor: "white"}}>
+      <div
+        style={{
+          border: "1px solid rgb(209, 209, 209)",
+          borderRadius: "2rem",
+          backgroundColor: "white",
+        }}
+      >
         <div>
-          <div style={{ margin: "1rem",marginLeft: "3rem" }}>
+          <div style={{ margin: "1rem", marginLeft: "3rem" }}>
             <div>
-              <h6 style={{ marginBottom: "1rem", fontSize:"1.1rem" }}>MONDAY</h6>
+              <h6 style={{ marginBottom: "1rem", fontSize: "1.1rem" }}>
+                MONDAY
+              </h6>
             </div>
             <div style={{ display: "flex" }}>
               <img
@@ -38,9 +47,11 @@ function MyActivity() {
         </div>
         <hr style={{ margin: "1rem" }} />
         <div>
-          <div style={{ margin: "1rem" , marginLeft:"3rem"}}>
+          <div style={{ margin: "1rem", marginLeft: "3rem" }}>
             <div>
-              <h6 style={{ marginBottom: "1rem",fontSize:"1.5rem" }}>10 DAYS AGO</h6>
+              <h6 style={{ marginBottom: "1rem", fontSize: "1.5rem" }}>
+                10 DAYS AGO
+              </h6>
             </div>
             <div style={{ display: "flex" }}>
               <img
@@ -56,7 +67,13 @@ function MyActivity() {
           </div>
         </div>
         <hr style={{ margin: "1rem" }} />
-        <h5 style={{ margin: "1.5rem", marginLeft: "3rem", color: "rgb(46 141 255)" }}>
+        <h5
+          style={{
+            margin: "1.5rem",
+            marginLeft: "3rem",
+            color: "rgb(46 141 255)",
+          }}
+        >
           VIEW ALL ACTIVITY
         </h5>
       </div>
