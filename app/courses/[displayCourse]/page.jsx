@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { courses } from "@/app/page";
-import CoursePreview from "@/Components/Courses/Course/CoursePreview";
-import CourseContent from "@/Components/CourseContent/CourseContent";
+import CoursePreview from "@/components/Courses/Course/CoursePreview";
+import CourseContent from "@/components/CourseContent/CourseContent";
 import styles from "../../courses/coursePage.module.css";
 
 const CoursePreviews = ({ params }) => {
