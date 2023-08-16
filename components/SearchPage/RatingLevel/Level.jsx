@@ -1,11 +1,7 @@
 "use client";
-<<<<<<< HEAD
 import { useState, useContext } from "react";
 import SearchContext from "@/store/search-context";
 
-=======
-import { useState } from "react";
->>>>>>> 46bb3978e5b4a791035c18796e93cdc06119340d
 import styles from "./styles/level.module.css";
 import { courses } from "@/app/page";
 let category = [
@@ -25,15 +21,12 @@ const Level = (props) => {
       const updatedCategories = isChecked
         ? [...prevCheckedCategories, categoryId]
         : prevCheckedCategories.filter((id) => id !== categoryId);
-<<<<<<< HEAD
 
       // console.log("updatedCategories");
       // console.log(updatedCategories);
 
       console.log("searchCtx");
       console.log(searchCtx.filteredCoursesIds);
-=======
->>>>>>> 46bb3978e5b4a791035c18796e93cdc06119340d
       props.levelsCheckedArray(updatedCategories, "level");
       // courses.forEach((course) => {
       //   if (levelsChecked.includes(course.level.toLowerCase())) {
