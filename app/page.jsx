@@ -14,7 +14,7 @@ const courses = [
     price: 24,
     image:
       "https://assets.api.uizard.io/api/cdn/stream/4f91c603-603d-44e2-ab35-65be1763f022.jpg",
-    rate: 4.6,
+    rate: 1.0,
     value: 11,
     content: [
       { name: "Introduction", videos: 1 },
@@ -52,7 +52,7 @@ const courses = [
     value: 27,
     category: "Content Making",
     description: "test",
-    rate: 5.0,
+    rate: 2.0,
     duration: "2h",
     price: 24,
     level: "Professional",
@@ -115,7 +115,7 @@ const courses = [
     value: 27,
     category: "Photography",
     description: "test",
-    rate: 5.0,
+    rate: 3.0,
     duration: "2h",
     price: 24,
     level: "Intermediate",
@@ -136,7 +136,7 @@ const courses = [
     value: 27,
     category: "Excel",
     description: "test",
-    rate: 5.0,
+    rate: 3.0,
     duration: "2h",
     price: 24,
     level: "Professional",
@@ -180,7 +180,7 @@ const courses = [
     duration: "1h 44min",
     level: "Intermediate",
     price: 16.99,
-    rate: 4.2,
+    rate: 4.0,
     value: 10,
     image:
       "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMDUzMDJ8MHwxfHNlYXJjaHwyfHx1eCUyMGRlc2lnbiUyMHxlbnwxfHx8fDE2NzMwMTc0MDg&ixlib=rb-4.0.3&q=80&w=1080",
@@ -222,7 +222,7 @@ const courses = [
     duration: "1h 44min",
     level: "Beginner",
     price: 16.99,
-    rate: 4.2,
+    rate: 3.2,
     value: 10,
     image:
       "https://images.unsplash.com/photo-1547027072-332f09bd6bb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMDUzMDJ8MHwxfHNlYXJjaHw0Mnx8dXglMjBkZXNpZ258ZW58MXx8fHwxNjczMDE5MTc5&ixlib=rb-4.0.3&q=80&w=1080",
