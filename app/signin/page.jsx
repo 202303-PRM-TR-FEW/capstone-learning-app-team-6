@@ -10,9 +10,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-// import { AiOutlineEyeInvisible } from "react-icons/ai";
-// import { AiOutlineEye } from "react-icons/ai";
-
 import styles from "./signinPage.module.css";
 
 const LoginPage = () => {

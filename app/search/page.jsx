@@ -4,7 +4,6 @@ import CategoriesSearchPage from "@/Components/SearchPage/CategoriesSearchPage/c
 import SearchBar from "@/Components/SearchPage/FindYourFav/SearchBar";
 import RatingLevel from "@/Components/SearchPage/RatingLevel/RatingLevel";
 import Recommended from "@/Components/SearchPage/RecommendedForYou/Recommended";
-
 import { useState, useEffect } from "react";
 import { courses } from "@/app/page";
 
@@ -12,10 +11,8 @@ const Search = () => {
   let checkedArray = [];
   let matchingCoursesIds = [];
   let displayedCourses = [];
-
   const [filter, setFilter] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
-
   // Update filter state when searchInput changes
   const handleInputChange = (searchInput) => {
     setFilter(searchInput);

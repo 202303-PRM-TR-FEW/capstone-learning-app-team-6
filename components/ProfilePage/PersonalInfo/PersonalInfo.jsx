@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Styles from "./styles/PersonalInfo.module.css";
+
 const profile = {
   image: "/../public/images/image.jpg",
   name: "Sally",
@@ -12,9 +13,7 @@ const profile = {
 
 const Profile = () => {
   return (
-    <div
-      className={`main flex flex-row gap-x-5 p-4 ${Styles.main}`}
-    >
+    <div className={`main flex flex-row gap-x-5 p-4 ${Styles.main}`}>
       <div>
         <Image
           className={`rounded-full ${Styles.img}`}

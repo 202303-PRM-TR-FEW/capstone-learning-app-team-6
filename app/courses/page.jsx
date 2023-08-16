@@ -1,19 +1,15 @@
 "use client";
 import { useState } from "react";
 import { courses } from "@/app/page";
-
 import CoursePreview from "@/components/Courses/Course/CoursePreview";
 import MyLearningCourses from "@/components/Courses/MyLearning/MyLearningCourses";
-
 import styles from "./coursePage.module.css";
+
 const Courses = (props) => {
   const [displayCourse, setDisplayCourse] = useState(courses[0]);
-
   const renderClickedCourse = (courseName) => {
-    // console.log(courses.indexOf(courseName));
     const clickedCourseIndex = courses.indexOf(courseName);
     setDisplayCourse(courses[clickedCourseIndex]);
-    // console.log(displayCourse);
   };
 
   return (
@@ -35,4 +31,5 @@ const Courses = (props) => {
     </main>
   );
 };
+
 export default Courses;

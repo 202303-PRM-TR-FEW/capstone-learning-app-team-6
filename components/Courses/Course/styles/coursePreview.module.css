@@ -29,17 +29,21 @@
   margin-bottom: 1rem;
   color: #000;
 }
+
 .icon {
   width: 1.5rem;
 }
+
 .media-container img {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
 }
+
 .course-content__container {
   margin-left: 2rem;
 }
+
 .author-container {
   gap: 1rem;
   color: #303030;
@@ -51,13 +55,16 @@
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
+
 .author-container:hover {
-opacity: 0.7;
+  opacity: 0.7;
 }
+
 .author-image__container {
   width: 4rem;
   height: 4rem;
 }
+
 .author-container img {
   width: 100%;
   height: 100%;
@@ -69,6 +76,7 @@ opacity: 0.7;
   font-size: 1.2rem;
   color: #666;
 }
+
 .course-info {
   flex-direction: column;
   align-items: flex-start;
@@ -79,6 +87,7 @@ opacity: 0.7;
   font-size: 1.5rem;
   gap: 1rem;
 }
+
 .course-duration,
 .course-rate {
   gap: 0.5rem;
@@ -103,6 +112,7 @@ opacity: 0.7;
   padding: 1rem;
   text-align: center;
 }
+
 .action-button:hover {
   background-color: #fbfbfb;
   border: 1px solid #2e8dff;
@@ -114,6 +124,7 @@ opacity: 0.7;
   border: 1px solid #2e8dff;
   color: #2e8dff;
 }
+
 .action-button__review:hover {
   border-radius: 1rem;
   background-color: #2e8dff;

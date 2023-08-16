@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  /* border: 1px solid red; */
   width: 60rem;
   height: 35rem;
   margin-left: 1rem;
@@ -34,7 +33,6 @@
   text-align: center;
   display: flex;
   padding: 1rem;
-  /* border: 1px solid red; */
   float: right;
   height: 7rem;
   margin-right: 5rem;
@@ -59,7 +57,6 @@
 }
 
 .friendName {
-  /*  border: solid; */
   width: 20rem;
   text-align: left;
   padding-left: 1rem;
@@ -91,24 +88,3 @@
   margin-left: 15rem;
   cursor: pointer;
 }
-/* 
-@media (max-width: 1000px) {
-  .container {
-    flex-direction: column;
-    bottom: 0rem;
-    margin-left: 0rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .container {
-    flex-direction: column;
-    bottom: -10rem;
-    margin-right: 100rem;
-  }
-
-  .title {
-    margin-right: 0rem;
-  }
-}
- */

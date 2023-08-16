@@ -1,4 +1,3 @@
-
 import styles from "./styles/totalStatElem.module.css";
 
 const TotalStatElem = (props) => {

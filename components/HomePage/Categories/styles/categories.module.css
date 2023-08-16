@@ -1,11 +1,3 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-.parent {
-  margin-bottom: 3rem;
-}
-
 .li {
   display: inline-flex;
   flex-direction: column;
@@ -34,4 +26,8 @@
   font-family: "Courier New", Courier, monospace;
   margin-top: 1rem;
   color: #686868;
+}
+
+.parent {
+  margin-bottom: 3rem;
 }

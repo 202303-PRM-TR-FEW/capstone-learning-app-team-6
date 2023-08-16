@@ -1,6 +1,5 @@
 import { courses } from "@/app/page";
 import DisplayMyLearning from "./DisplayMyLearning";
-
 import styles from "./styles/myLearning.module.css";
 import Button from "@/components/UI/Button";
 import Progress from "@/components/UI/Progress";

@@ -1,8 +1,6 @@
 import { courses } from "@/app/page";
-
 import DisplayChapterElements from "./DisplayChapterElements";
 import ActionButton from "../UI/ActionButton";
-
 import styles from "./styles/courseContent.module.css";
 
 const CourseContent = (props) => {
@@ -19,4 +17,5 @@ const CourseContent = (props) => {
     </section>
   );
 };
+
 export default CourseContent;

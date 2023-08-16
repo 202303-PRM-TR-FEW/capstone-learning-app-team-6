@@ -1,4 +1,5 @@
 import Styles from "./styles/friends.module.css";
+
 let friends = [
   { name: "William Walker", img: "https://i.pravatar.cc/48?u=499476" },
   { name: "Anna Clarke", img: "https://i.pravatar.cc/400?img=47" },

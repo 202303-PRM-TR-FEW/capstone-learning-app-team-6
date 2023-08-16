@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-
 import styles from "./styles/level.module.css";
 let category = [
   { id: "beginner", name: "Beginner" },
   { id: "intermediate", name: "Intermediate" },
   { id: "professional", name: "Professional" },
 ];
+
 const Level = (props) => {
   const [levelsChecked, setLevelsChecked] = useState([]);
 
@@ -17,23 +17,10 @@ const Level = (props) => {
       const updatedCategories = isChecked
         ? [...prevCheckedCategories, categoryId]
         : prevCheckedCategories.filter((id) => id !== categoryId);
-
-      // console.log(updatedCategories);
       props.levelsCheckedArray(updatedCategories, "level");
       return updatedCategories;
     });
   };
-  // const handleCheckboxChange = (event, categoryId) => {
-  //   const isChecked = event.target.checked;
-  //   if (isChecked) {
-  //     setLevelsChecked([...levelsChecked, categoryId]);
-  //     // console.log(levelsChecked);
-  //     props.levelsCheckedArray(levelsChecked)
-  //   } else {
-  //     setLevelsChecked(levelsChecked.filter((id) => id !== categoryId));
-  //     // console.log(levelsChecked);
-  //   }
-  // };
 
   return (
     <section>

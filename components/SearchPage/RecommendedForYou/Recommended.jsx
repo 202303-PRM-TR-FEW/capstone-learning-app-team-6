@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 
 const Recommended = (props) => {
   const router = useRouter();
-
   const reviewBtnHandler = (e) => {
     const courseId = e.target.closest("div").getAttribute("data-coureseid");
     const course = courses.find((course) => course.id === courseId);

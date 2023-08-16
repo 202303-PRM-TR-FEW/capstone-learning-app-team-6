@@ -28,17 +28,21 @@ body {
   align-items: center;
   grid-template-columns: 1fr 1fr;
 }
+
 .home-container {
   margin: auto 12rem auto 4rem;
 }
+
 .home-container > section:first-of-type {
   padding-top: 3rem;
 }
+
 @media (max-width: 950px) {
   .home-container {
     margin-right: 4rem;
   }
 }
+
 @media (max-width: 480px) {
   .home-container {
     margin-right: 1rem;

@@ -21,10 +21,7 @@ function TopSearches(props) {
 
     props.onClick(searchValue);
   };
-  // const handleInputChange = (searchValue) => {
-  //   setActiveSearch(searchValue);
-  //   props.onClick(searchValue);
-  // };
+
   return (
     <section className={styles.section}>
       <h2 className={styles.header}>TOP SEARCHES</h2>
@@ -43,23 +40,6 @@ function TopSearches(props) {
       </ul>
     </section>
   );
-
-  // return (
-  //   <section className={styles.section}>
-  //     <h2 className={styles.header}>TOP SEARCHES</h2>
-  //     <ul className={styles.parent}>
-  //       {topSearches.map((searchItem) => (
-  //         <li
-  //           key={searchItem.name}
-  //           className={`${styles.li}`}
-  //           onClick={() => handleInputChange(searchItem.name)  className={`${styles.active}`.toggle}}
-  //         >
-  //           <p className={styles.text}>{searchItem.name}</p>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   </section>
-  // );
 }
 
 export default TopSearches;

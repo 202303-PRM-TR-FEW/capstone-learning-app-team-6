@@ -13,12 +13,18 @@ const Navbar = () => {
   };
   const [changeClass, setChangeClass] = useState(classes);
   const pathname = usePathname();
-  if (pathname === "/" || pathname === "/signin") {
+  if (
+    pathname === "/" ||
+    pathname === "/signin" ||
+    pathname === "/statistics"
+  ) {
     return null;
   }
 
   return (
-    <nav className=" flex flex-col rounded w-20 h-screen text-center gap-10 pl-10 pt-12">
+    <nav
+      className={`flex flex-col rounded w-20 h-screen text-center gap-10 pl-10 pt-12`}
+    >
       <Link href="/">
         <div>
           <div className="text-blue-500 hover:text-blue-400 cursor-pointer">

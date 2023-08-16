@@ -1,10 +1,8 @@
 .parent {
   list-style-type: none;
   overflow: hidden;
-
   display: flex;
   justify-content: space-around;
-  /* border: 1px solid red; */
   text-align: center !important;
 }
 
@@ -18,7 +16,7 @@
 
 .day {
   font-size: 1.1rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .goal {

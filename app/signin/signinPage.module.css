@@ -13,14 +13,6 @@
   border-radius: 10px;
 }
 
-/* .input-field {
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-} */
-
 .button {
   padding: 10px;
   width: 100%;
@@ -71,13 +63,6 @@
   outline-color: #778899;
 }
 
-/* .inputField {
-  width: 100%;
-  box-sizing: border-box;
-  outline-width: 2px;
-  outline-color: #60a5fa;
-} */
-
 .inputField {
   width: 100%;
   box-sizing: border-box;
@@ -86,10 +71,6 @@
   outline-width: 2px;
   outline-color: #60a5fa;
 }
-
-/* .inputField:focus {
-  border-color: #60a5fa;
-} */
 
 .togglePasswordVisibility {
   position: absolute;

@@ -2,6 +2,9 @@ import DisplayMyLearning from "@/components/HomePage/MyLearning/DisplayMyLearnin
 import { courses } from "@/app/page";
 import { fetchedCourses } from "@/components/Fetching/fetching";
 import Button from "@/components/UI/Button";
+import EqualizerIcon from "@mui/icons-material/Equalizer";
+import Link from "next/link";
+import Styles from "./styles/MyLearningCourses.module.css";
 
 const MyLearningCourses = (props) => {
   const getClickedCourse = (event) => {
@@ -25,9 +28,29 @@ const MyLearningCourses = (props) => {
       console.log("after", clickedCourseID);
     } else return;
   };
+
   return (
     <section style={{ paddingTop: "3rem" }}>
-      <h2 className="header-text">{props.header}</h2>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <h2 className="header-text">{props.header}</h2>
+        <Link
+          href="/statistics"
+          className={Styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={Styles.statistics}>
+            <EqualizerIcon style={{ fontSize: "2.5rem" }} />
+            Statistics
+          </h2>
+        </Link>
+      </div>
       <ul onClick={getClickedCourse}>
         <DisplayMyLearning
           AllCourses={props.courses}

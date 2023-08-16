@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { courses } from "@/app/page";
 import CoursePreview from "@/components/Courses/Course/CoursePreview";
 import MyLearningCourses from "@/components/Courses/MyLearning/MyLearningCourses";
-
 import styles from "../courses/coursePage.module.css";
 import {
   fetchSavedCourses,
@@ -26,14 +25,10 @@ const SavedCourses = (props) => {
       const newlyFetchedCourses = await fetchSavedCourses();
       setSavedCourses(newlyFetchedCourses);
     };
-
     fetchCourses();
   }, []);
   console.log("savedCourses");
   console.log(savedCourses);
-  // useEffect(() => {
-  //   setDisplayCourse(fetchedCourses[0]);
-  // }, [fetchedCourses]);
 
   return (
     <main
