@@ -2,7 +2,7 @@ import Image from "next/image";
 import Styles from "./styles/PersonalInfo.module.css";
 
 const profile = {
-  image: "/../public/images/image.jpg",
+  image: "@/public/images/image.jpg",
   name: "Sally",
   last: "Robins",
   city: "NEW YORK",
