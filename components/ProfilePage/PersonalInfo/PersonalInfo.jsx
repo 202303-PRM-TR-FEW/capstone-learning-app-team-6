@@ -2,7 +2,8 @@ import Image from "next/image";
 import Styles from "./styles/PersonalInfo.module.css";
 
 const profile = {
-  image: "@/public/images/image.jpg",
+  image:
+    "https://images.unsplash.com/photo-1440589473619-3cde28941638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMDUzMDJ8MHwxfHNlYXJjaHwyfHxQZW9wbGV8ZW58MXx8fHwxNjcyOTE2NzEx&ixlib=rb-4.0.3&q=80&w=1080",
   name: "Sally",
   last: "Robins",
   city: "NEW YORK",
@@ -18,8 +19,8 @@ const Profile = () => {
         <Image
           className={`rounded-full ${Styles.img}`}
           src={profile.image}
-          width={1000}
-          height={1000}
+          width={100}
+          height={100}
           alt="Picture of the author"
         />
       </div>
