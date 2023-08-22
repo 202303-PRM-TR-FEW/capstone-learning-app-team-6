@@ -1,15 +1,18 @@
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@fortawesome/fontawesome-free/js/all.js";
+import React from "react";
 import styles from "./styles/categories.module.css";
+import { FaLightbulb } from "react-icons/fa";
+import { AiOutlineStock, AiTwotoneStar } from "react-icons/ai";
+import { MdGroups2, MdDraw, MdDesignServices } from "react-icons/md";
+import { BsFillDatabaseFill } from "react-icons/bs";
 
 let category = [
-  { icon: "fa-solid fa-chart-line", name: "Sales" },
-  { icon: "fa-solid fa-users-line", name: "HR" },
-  { icon: "fa-solid fa-bezier-curve", name: "Drawing" },
-  { icon: "fa-solid fa-table", name: "Big Data" },
-  { icon: "fa-solid fa-pen-ruler", name: "Design" },
-  { icon: "fa-solid fa-lightbulb", name: "Marketing" },
-  { icon: "fa-solid fa-star", name: "Astronomy" },
+  { icon: <AiOutlineStock />, name: "Sales" },
+  { icon: <MdGroups2 />, name: "HR" },
+  { icon: <MdDraw />, name: "Drawing" },
+  { icon: <BsFillDatabaseFill />, name: "Big Data" },
+  { icon: <MdDesignServices />, name: "Design" },
+  { icon: <FaLightbulb />, name: "Marketing" },
+  { icon: <AiTwotoneStar />, name: "Astronomy" },
 ];
 
 function Categories() {
@@ -17,9 +20,10 @@ function Categories() {
     <section className={styles.parent}>
       <h2 className="header-text">Categories</h2>
       <ul>
-        {category.map((category) => (
-          <li key={category.name} className={`${category.icon} ${styles.li} `}>
-            <p className={styles.text}>{category.name}</p>
+        {category.map((categoryItem) => (
+          <li key={categoryItem.name} className={styles.li}>
+            {categoryItem.icon}
+            <p className={styles.text}>{categoryItem.name}</p>
           </li>
         ))}
       </ul>
